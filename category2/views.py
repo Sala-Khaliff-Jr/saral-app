@@ -9,3 +9,7 @@ def brush_hour_view(request):
 
 def just_a_min_view(request):
     return render(request,'category2/justamin.html')    
+
+def groove_glam_view(request):
+    return render(request,'category2/grooveglam.html')        
+

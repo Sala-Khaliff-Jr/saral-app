@@ -5,4 +5,5 @@ urlpatterns = [
     path('scribble',views.scribble_view,name='scribble_page'),
     path('brushhour',views.brush_hour_view,name='brush_hour_page'),
     path('justamin',views.just_a_min_view,name='just_a_min_page'),
+    path('grooveglam',views.groove_glam_view,name='groove_glam_pages'),
 ]   
