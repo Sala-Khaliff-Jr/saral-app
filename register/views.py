@@ -25,4 +25,4 @@ def view_registrations(request):
         registrations = Registrations.objects.all()
         return render(request(request,'viewreg.html',{'registrations':registrations}))
     except:
-
+        return render(request,'index.html')
