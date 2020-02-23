@@ -16,3 +16,5 @@ def groove_glam_view(request):
 def shake_it_up_view(request):
     return render(request,'category2/shakeitup.html')        
 
+def raga_view(request):
+    return render(request,'category2/raga.html') 
