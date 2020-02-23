@@ -20,4 +20,9 @@ def register_view(request):
             return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':reg_id.id}))
         except:
             return(render(request,'register.html',{'submit':'NO'}))
-# def view_registrations(request):
+def view_registrations(request):
+    try:
+        registrations = Registrations.objects.all()
+        return render(request(request,'viewreg.html',{'registrations':registrations}))
+    except:
+
