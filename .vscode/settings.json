@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "D:\\Workspace\\venv-saral\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": false
+}
