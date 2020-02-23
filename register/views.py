@@ -13,16 +13,14 @@ def register_view(request):
         try:
             student_name = request.POST.get('name')
             email_id = request.POST.get('email')
+            college_name = request.POST.get('college')
             request.session['student_name'] = student_name
             request.session['email'] = email_id
-            Registrations.objects.create(student_name=student_name,email_id=email_id)
+            Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name)
             reg_id = Registrations.objects.get(email_id=email_id)
             return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':reg_id.id}))
         except:
             return(render(request,'register.html',{'submit':'NO'}))
 def view_registrations(request):
-    try:
-        registrations = Registrations.objects.all()
-        return render(request(request,'viewreg.html',{'registrations':registrations}))
-    except:
-        return render(request,'index.html')
+    registrations = Registrations.objects.all()
+    return render(request,'viewreg.html',{'registrations':registrations})
