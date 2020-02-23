@@ -6,3 +6,6 @@ def scribble_view(request):
 
 def brush_hour_view(request):
     return render(request,'category2/brushhour.html')
+
+def just_a_min_view(request):
+    return render(request,'category2/justamin.html')    
