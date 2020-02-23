@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'register',
     'category1',
     'category2',
+    'category3',
 ]
 
 MIDDLEWARE = [
