@@ -13,3 +13,6 @@ def just_a_min_view(request):
 def groove_glam_view(request):
     return render(request,'category2/grooveglam.html')        
 
+def shake_it_up_view(request):
+    return render(request,'category2/shakeitup.html')        
+

@@ -6,4 +6,5 @@ urlpatterns = [
     path('brushhour',views.brush_hour_view,name='brush_hour_page'),
     path('justamin',views.just_a_min_view,name='just_a_min_page'),
     path('grooveglam',views.groove_glam_view,name='groove_glam_pages'),
+    path('shakeitup',views.shake_it_up_view,name='shake_it_up_page'),
 ]   
