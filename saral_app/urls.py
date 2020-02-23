@@ -20,5 +20,6 @@ urlpatterns = [
     path('' , include('register.urls')),
     path('' , include('category1.urls')),
     path('' , include('category2.urls')),
+    path('' , include('category3.urls')),
 
 ]
