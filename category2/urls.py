@@ -8,4 +8,5 @@ urlpatterns = [
     path('grooveglam',views.groove_glam_view,name='groove_glam_pages'),
     path('shakeitup',views.shake_it_up_view,name='shake_it_up_page'),
     path('raga',views.raga_view,name='raga_page'),
+    path('listentobeat',views.listen_to_beat_view,name='listen_to_beat_page'),
 ]   

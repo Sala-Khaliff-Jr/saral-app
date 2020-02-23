@@ -18,3 +18,6 @@ def shake_it_up_view(request):
 
 def raga_view(request):
     return render(request,'category2/raga.html') 
+
+def listen_to_beat_view(request):
+    return render(request,'category2/listentobeat.html')    
