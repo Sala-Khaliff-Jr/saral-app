@@ -2,5 +2,6 @@ from django.urls import path
 
 from . import views
 urlpatterns = [
-    path('index',views.index_page_view,name='index_page'),
+    path('scribble',views.scribble_view,name='scribble_page'),
+    path('brushhour',views.brush_hour_view,name='brush_hour_page'),
 ]   
