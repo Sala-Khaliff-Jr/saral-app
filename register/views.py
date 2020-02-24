@@ -17,13 +17,12 @@ def register_view(request):
         college_name = request.POST.get('college')
         
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id="")
-        register = Registrations.objects.get(email_id=email_id)
-        print(Registrations.objects.filter(email_id=email_id))
-        Registrations.objects.filter(email_id=email_id).update(reg_id="SARAL00"+str(register.id))
         
+        # print(Registrations.objects.filter(email_id=email_id))
+        Registrations.objects.filter(email_id=email_id).update(reg_id="SARAL00"+str(register.id))
+        register = Registrations.objects.get(email_id=email_id)
         request.session['student_name'] = student_name
         request.session['email'] = email_id
-
         return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
