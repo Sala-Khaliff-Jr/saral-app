@@ -7,4 +7,4 @@ class Registrations(models.Model):
     email_id = models.EmailField(unique=True)
     reg_id = models.CharField(unique=True,max_length=16)
     def __str__(self):
-        return self.student_name
+        return self.student_name+" "+self.reg_id
