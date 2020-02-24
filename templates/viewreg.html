@@ -1,5 +1,5 @@
 {%load static%}
 
 {% for students in registrations %}
-    <li>{{students.student_name }} {{ students.email_id}}  {{ students.college_name}}</li>
+    <li>{{students.id }} {{students.student_name }} {{ students.email_id}}  {{ students.college_name}}</li>
 {% endfor %}
