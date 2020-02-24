@@ -13,8 +13,17 @@ def register_view(request):
         # print(request.POST.get('name'))
         # print(request.POST.get('college'))
         # try:
-        student_name = request.POST.get('name')
         email_id = request.POST.get('email')
+        
+        # try :
+            
+        print(Registrations.objects.filter(email_id=email_id))
+        if not Registrations.objects.filter(email_id=email_id):
+            print("Not Existing")
+        else:
+            print("Existing")
+        student_name = request.POST.get('name')
+
         college_name = request.POST.get('college')
 
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000))
@@ -25,6 +34,9 @@ def register_view(request):
         request.session['student_name'] = student_name
         request.session['email'] = email_id
         return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id}))
+        
+        # except:
+        #     return(render(request,'register.html',{'submit':'NO'}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
 def view_registrations(request):
