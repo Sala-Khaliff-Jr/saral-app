@@ -578,7 +578,7 @@ a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	height:600px;
-	margin-bottom:110px;
+	/* margin-bottom:110px; */
 	display:table;
 	width:100%;
 }

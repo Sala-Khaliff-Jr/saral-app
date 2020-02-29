@@ -1,48 +1,68 @@
-{% load static %}
 <html>
-
-<head>
-    <title>Saral Registration</title>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Eventr - One Page Event Template">
-    <meta name="author" content="themecube">
-
-    <!-- viewport settings -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-
-    <link rel="stylesheet" href="{% static 'css/pe-icon-7-stroke.css' %}">
-    <link rel="stylesheet" href="{% static 'css/helper.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font.css' %}">
-    <link rel="stylesheet" href="{% static 'css/salvattore.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.countdown.css' %}">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.transitions.css' %}">
-    <link rel="stylesheet" href="{% static 'css/revolution.css' %}">
-    <link rel="stylesheet" href="{% static 'css/revolution-extralayers.css' %}">
-
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
-
-    <!-- Font -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <head><title>Registration Form</title>
+        <link rel="stylesheet" href="D:/Workspace/saral_app/static/css/font.css">
+        <link rel="stylesheet" href="D:/Workspace/saral_app/static/css/bootstrap.css">
     <style>
-        .cosmic-bg {
-            background-image: url(static/img/cosmic-bg.jpg);
-          
+        body{
+            padding: 0px auto;
+            margin: 0px auto;
+        }
+        .wrapper{
+            width: 88%;
+            height: 100%;
+            background-color: white;
+            display: block;
+            margin: auto;
+        }
+        .pgimage{
+            width: 100%;
+            height: 16%;
+            background-color: black;
+            background-image: url("D:/Workspace/saral_app/static/img/cosmic-bg.jpg");
+        }
+        .description{
+            width: 100%;
+            height:14%;
+            background-color:white;
+            color: #666666;
+            text-align: center;
+        }
+        .b-div{
+            width: 100%;
+            height:70%;
+            background-color:white;
+        }
+        .rules{
+            width: 70%;
+            height:100%;
+            float: left;
+            background-color:white;
+        }
+        .reg-div{
+            width: 30%;
+            height:100%;
+            float: left;
+            background-color:white;
+        }
+         .description{
+            font-size: 20px;
+            font-style: normal;
+        } 
+        h2{
+            font-family:'montserratbold';
+            color: #262626;
+            font-size: 32px;
+        }
+        li{
+            color: #666666;
+            font-size: 20px;
+        }
+        .r1{
+            margin-left: 20px;
+        }
+        #contactid{
+            list-style: none;
+            margin-top: 30px;
         }
 
         .registerbutton {
@@ -55,87 +75,66 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            margin: 4px 92px;
             cursor: pointer;
             border-radius: 4px;
         }
-        
-        .description{
-            font-size: 20px;
-            font-style: normal;
-        }
-        
-        
-        .col-lg-8{
-            border-right: 6px solid green;
-        }
-        .seperator{
-            position: relative;
-            left: 40px;
+        .wrap1{
+            width: 100%;
+            height: 100%;
+            background-color: white;
         }
     </style>
-</head>
 
-<body>
-
-
-    <!-- NAVIGATION -->
-    <nav id="nav-primary" class="navbar navbar-custom" role="navigation">
-        <div class="container">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index"><img src="{% static 'img/logo.png' %}" alt="logo" height="10%" width="30%"></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="nav navbar-nav navbar-right uppercase">
-                    <li><a data-toggle="elementscroll" href="#info">About</a></li>
-                    <li><a data-toggle="elementscroll" href="#program">Program</a></li>
-                    <li><a data-toggle="elementscroll" href="#venue">Venue</a></li>
-                    <li><a data-toggle="elementscroll" href="#register">Register</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-
-    <!-- INFO -->
-    <section id="info">
-        <div class="container">
-            <div class="">
-                <div class="">
-                    <div>
-                        <div class="cosmic-bg"><br>
-                            <center>
-                                <h1 style="color: aliceblue">Meme Creations</h1>
-                            </center><br>
-                        </div><br><br><p class="description">Originality – How unique the meme is, including use of original images or original editing of images. Level of Insightfulness – To what degree the meme contains information that is not commonly known by the public</p>
-                        <center><br><br></center>
-                      <div class="col-lg-8"><h2>Rules</h2>
-                        <ul>
-                            <li>Importance – The prominence of the issue(s) addressed by the meme</li>
-                            <li>Wit/Humor – How funny the meme is</li>
-                        </ul>
-                    </div><br><br><br><br><br><br><br>
-                    <a href="register">
-                    <div class="seperator">
-                        <button class="registerbutton">
-                            Register
+    </head>
+    <body>
+        <div class="wrap1">
+            <nav id="nav-primary" class="navbar navbar-custom" role="navigation">
+                <div class="container">
+        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
-                    </a>
-                    </div></div>
+                        <a href="index"><img src="D:/Workspace/saral_app/static/img/logo.png" alt="logo" height="10%" width="30%"></a>
+                    </div>
+            </nav>
+        <div class="wrapper">
+            <div class="pgimage" style="text-align:center;font-weight: bold;color:aliceblue;"><h1 style="padding-top: 25px;">Meme Creation</h1></div>
+            <div class="description"><span style="margin-top: 10px;">Originality – How unique the meme is, including use of original images or original editing of images. Level of Insightfulness – To what degree the meme contains information that is not commonly known by the public</span></div>
+            <div class="b-div">
+                <div class="rules">
+                    <div class="r1">
+                    <h2>Rules</h2>
+                    <ul>
+                        <li>Rule1 : Importance - The Prominence of the issue(s) addressed by the meme</li>
+                        <li>Rule2 : Wit/Humor - How funny the meme is</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="reg-div">
+                    <ul id="contactid">
+                        <li><b style="font-family:'montserratbold';color: #262626;font-size: 32px;">Contact Us</b></li><br>
+                        <li>Name : Dinesh Kumar</li>
+                        <li>Ph : 8778593843</li>
+                        <li>Name : S.Saadhana</li>
+                        <li>Contact : 9578034554</li>
+                        <li>Name : K.J Abhi Kanishka</li>
+                        <li>Contact : 8940605490</li>
+                        <li>Name : H. Abhishek</li>
+                        <li>Contact : 7395880886</li>
+                    </ul>
+                    
+                <!-- <br><br><br><br><br><br><br> -->
+                <a href="register">
+                    <!-- <div class="seperator"> --><button class="registerbutton">Register</button>
+                </a>
                 </div>
             </div>
         </div>
-    </section>
-
-
-</body>
-
+    </div>
+    </body>
 </html>
