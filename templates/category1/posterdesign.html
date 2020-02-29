@@ -1,7 +1,8 @@
+{%load static%}
 <html>
-    <head><title>Registration Form</title>
-        <link rel="stylesheet" href="D:/Workspace/saral_app/static/css/font.css">
-        <link rel="stylesheet" href="D:/Workspace/saral_app/static/css/bootstrap.css">
+    <head><title>Poster Design</title>
+        <link rel="stylesheet" href="{%static 'css/font.css'%}">
+        <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
     <style>
         body{
             padding: 0px auto;
@@ -18,7 +19,7 @@
             width: 100%;
             height: 16%;
             background-color: black;
-            background-image: url("D:/Workspace/saral_app/static/img/cosmic-bg.jpg");
+            background-image: url(static/img/cosmic-bg.jpg);
         }
         .description{
             width: 100%;
@@ -99,7 +100,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index"><img src="D:/Workspace/saral_app/static/img/logo.png" alt="logo" height="10%" width="30%"></a>
+                        <a href="index"><img src="{%static 'img/logo.png'%}" alt="logo" height="10%" width="30%"></a>
                     </div>
             </nav>
         <div class="wrapper">
