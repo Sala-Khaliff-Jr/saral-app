@@ -58,9 +58,6 @@ h5 {
 	font-family:'montserratlight';
 }
 
-section {
-	padding:90px 0;
-}
 
 .uppercase {
 	text-transform:uppercase;
@@ -567,7 +564,6 @@ a {
 
 #venue {
 	padding-top:0;
-	padding-bottom:110px;
 }
 
 #venue .venue {
@@ -578,7 +574,6 @@ a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	height:600px;
-	/* margin-bottom:110px; */
 	display:table;
 	width:100%;
 }
