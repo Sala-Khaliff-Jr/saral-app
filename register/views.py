@@ -14,21 +14,20 @@ def register_view(request):
         # print(request.POST.get('college'))
         # try:
         email_id = request.POST.get('email')
-        
         # try :
-            
+
         print('Email Present',Registrations.objects.filter(email_id=email_id))
 
         if not Registrations.objects.filter(email_id=email_id):
             print("Not Existing")
         else:
-            print("Existing")
+            # print("Existing")
             return render(request,'index.html')
 
         student_name = request.POST.get('name')
         college_name = request.POST.get('college')
-        
-        print(college_name)
+
+        # print(college_name)
 
 
         events = ""
@@ -40,7 +39,7 @@ def register_view(request):
         if request.POST.get('MEME CREATION') == 'on':
             events += "Meme Creation, "
             total_cost += 100
-            print(events) 
+            print(events)
         if request.POST.get('THIRD EYE') == 'on':
             events += "Third Eye, "
             total_cost += 100
@@ -73,7 +72,7 @@ def register_view(request):
             total_cost += 100
         if request.POST.get('GROOVE & GLAM') == 'on':
             events += "Groove and Glam, "
-            gndgteam_size = int(request.POST.get('gndgteamsize'))
+            # gndgteam_size = int(request.POST.get('gndgteamsize'))
             total_cost += 600
         if request.POST.get('SHAKE IT UP') == 'on':
             events += "Shake It Up, "
@@ -95,13 +94,13 @@ def register_view(request):
             events += "Pubg, "
             if request.POST.get('mobsolo') == 'on':
                 total_cost += 50
-            if request.POST.get('mobsquad'):
+            if request.POST.get('mobsquad') == 'on':
                 total_cost += 200
         if request.POST.get('Free Fire') == 'on':
             events += "Free Fire, "
             if request.POST.get('mobsolo') == 'on':
                 total_cost += 50
-            if request.POST.get('mobsquad'):
+            if request.POST.get('mobsquad') == 'on':
                 total_cost += 200
 
         if request.POST.get('NFS MW') == 'on':
@@ -113,18 +112,23 @@ def register_view(request):
             if request.POST.get('mobsolo') == 'on':
                 total_cost += 100
             if request.POST.get('mobsolo') == 'pcsquad':
-                total_cost += 500 
+                total_cost += 500
+        # if request.POST.get('CELEBRITYSHOW') == 'on':
+        #     total_cost += 100
+
         if (len(events) < 3 and total_cost < 50):
             print(events,total_cost)
             return render(request,'register.html',{'submit':'NO','EVENTSELECT':'No'})
-        
-        print(events)
+
+
+        # print(events)
         # try:
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
         register = Registrations.objects.get(email_id=email_id)
-        
-        print(Registrations.objects.filter(email_id=email_id))
-        Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
+
+        # print(Registrations.objects.filter(email_id=email_id))
+
+        Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))
         register = Registrations.objects.get(email_id=email_id)
         request.session['student_name'] = student_name
         request.session['email'] = email_id

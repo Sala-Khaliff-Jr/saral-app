@@ -11,7 +11,7 @@ padding:0px auto;
 .wrapper{
 width:100%;
 height:fit-content;
-background-color:white;
+background-color:white #f1f1f1;
 }
 #contactid{
   list-style: none;
@@ -30,12 +30,12 @@ input:invalid{
 } */
 
 .a1{
-width:28%;
+width:32%;
 height:50px;
 border:none;
 background-color:#f1f1f1;
-border-right:2px solid #333;
-border-left:2px solid #333;
+border-right:2px solid #f1f1f1;
+/*border-left:2px solid #333;*/
 cursor:pointer;
 }
 .a1:hover{
@@ -63,6 +63,22 @@ margin-right:60px;
 margin-top:25px;
 }
 
+#phonepay{
+height:250px;
+width:220px;
+background-image:url(static/img/phonepe.png);
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+
+#googlepay{
+height:250px;
+width:220px;
+background-image:url(static/img/gpay.png);
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+
 .top{
 height:70%;
 width:100%;
@@ -83,77 +99,8 @@ font-size:16px;
 }
 
 
-@media only screen and (min-width : 300px) and (max-width: 480px) {
-.bxes{
-width:300px;
-height:350px;
-float:left;
-margin-bottom: 10px;
-margin-left: 10px;
-}
-
-.bottom{
-height:40%;
-width:100%;
-background-color:#333;
-color:white;
-font-family:calibri;
-text-align:center;
-font-size:22px;
-}
-
-#t1{
-position:relative;
-bottom:8px;
-}
-#b1 .bxes{
-width:0px;
-height:0px;
-}
-.bxes1{
-display : none;
-}
-.a1{
-width:85%;
-height:50px;
-border:none;
-background-color:#f1f1f1;
-border-right:2px solid #333;
-border-left:2px solid #333;
-cursor:pointer;
-}
-}
 
 
-@media only screen and (min-width : 300px) and (max-width: 480px) {
-.bxes{
-width:300px;
-height:270px;
-float:left;
-margin-bottom: 10px;
-margin-left: 30px;
-}
-#t1{
-position:relative;
-bottom:8px;
-}
-#b1 .bxes{
-width:0px;
-height:0px;
-}
-.bxes1{
-display : none;
-}
-.a1{
-width:85%;
-height:50px;
-border:none;
-background-color:#f1f1f1;
-border-right:2px solid #333;
-border-left:2px solid #333;
-cursor:pointer;
-}
-}
 
 
 
@@ -190,6 +137,48 @@ height:18px;
 margin-top:20px;
 border:none;
 }
+.box{
+ margin-top:1100px;
+}
+.bbox{
+display:none;
+}
+@media only screen and (min-width : 300px) and (max-width: 480px) {
+.bxes{
+width:300px;
+height:270px;
+float:left;
+margin-bottom: 10px;
+margin-left: 30px;
+}
+.bbox{
+display:block;
+}
+
+#t1{
+position:relative;
+bottom:8px;
+}
+#b1 .bxes{
+width:0px;
+height:0px;
+}
+.box{
+display:none;
+}
+.bxes1{
+display : none;
+}
+.a1{
+width:85%;
+height:50px;
+border:none;
+background-color:#f1f1f1;
+border-right:2px solid #333;
+border-left:2px solid #333;
+cursor:pointer;
+}
+}
 * {
   box-sizing: border-box;
 }
@@ -197,7 +186,10 @@ border:none;
 /* Add padding to containers */
 .container {
   padding: 16px;
-  background-color: white;
+  background-color:white;
+  background-image:url(static/img/wp.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 /* Full-width input fields */
@@ -242,7 +234,7 @@ hr {
 
 #id_college{
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
@@ -270,9 +262,9 @@ a{
     <label for="email"><b>Email</b><br></label>
     <input type="email" placeholder="Enter Email" name="email" required>
 
-  <b>College</b></br>
-  <!-- <label for="college"><b>College</b><br></label> -->
-	<select name="college" data-live-search="true" class="form-control" id="id_college">
+   <label for="college"><b>College</b><br></label>
+	<select name="college" data-live-search="true" class="form-control" id="id_college" required>
+
   <option value="" selected="">select a college</option>
 
   <option value="others">Others</option>
@@ -813,6 +805,8 @@ a{
   <option value="249">Kathir College of Engineering</option>
 
   <option value="250">KCG College of Technology</option>
+
+  <option value="700">KG College of Arts and Science</option>
 
   <option value="251">KGISL Institute Of Technology</option>
 
@@ -1562,7 +1556,7 @@ a{
 <div class="bottom"><b>GROOVE & GLAM &nbsp </b>
 <input type="checkbox" class="cb" name="GROOVE & GLAM"><br>
 Select Team Size
-<select id="teamsize" name="gndgteamsize">
+<select id="teamsize" name="gndgteamsize" style="color:black";>
 <option value="4">4</option>
 <option value="5">5</option>
 <option value="6">6</option>
@@ -1585,8 +1579,8 @@ Select Team Size
 <div class="bottom"><b>ANNIYAN &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="ANNIYAN"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="THE UNDERRATED TROUPER"></div></div>
-<div class="bxes1"></div>
-<div class="bxes1"></div>
+
+
 </div>
 
 
@@ -1596,12 +1590,12 @@ Select Team Size
   <b>&nbsp&nbspPUBG MOBILE</b> &nbsp
   <input type="checkbox" class="cb" name="PUBG">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   <label for="solo">&nbsp Solo</label>
-  <input type="checkbox" id="solo" name="mobsolo" name="solo">
+  <input type="checkbox" id="solo" name="mobsolo">
   <br>
   <b>&nbsp&nbspFREE FIRE MOBILE</b>
   <input type="checkbox" class="cb" name="Free Fire">&nbsp&nbsp&nbsp
   <label for="squad">Squad</label>
-  <input type="checkbox" id="squad" name="mobsquad" name="squad"></div></span></div>
+  <input type="checkbox" id="squad" name="mobsquad" ></div></span></div>
   <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
   <div class="bottom" style="text-align:left;"><span id="t1"><b>&nbsp&nbspCALL OF DUTY PC</b> &nbsp
   <input type="checkbox" class="cb" name="COD">&nbsp&nbsp&nbsp&nbsp<label for="solopc">Solo</label>
@@ -1609,14 +1603,25 @@ Select Team Size
   <input type="checkbox" class="cb" name="NFS MW">&nbsp&nbsp&nbsp&nbsp&nbsp
   <label for="squadpc">Squad</label>
   <input type="checkbox" id="squadpc" name="pcsquad" name="squadpc"></div></span></div>
-  <div class="bxes1"></div>
-  <div class="bxes1"></div>
+
+  <div class="bxes">
+    <div class="top" style="background-image:url(static/img/celebrity.png);background-size:100% 100%;background-repeat:no-repeat;">
+    </div>
+    <div class="bottom">
+        <span id="t1">
+        <b>&nbsp&nbsp Ticket For Celebrity</b> <br> Rs 100 <input type="checkbox" class="cb" name="TICKET FOR CELEBRITY"></div></div>
+  <!--<div class="bxes1"></div>-->
   </div>
 
 
 </div>
    <hr>
-    <p>Click register to confirm your registration</p>
+    <div class="box"><p>**Terms and Conditions Applied</p>
+    <p>Click register to confirm your registration</p></div>
+
+    <!--<div class="bbox"><p>Terms and Conditions Applied</p>-->
+    <!--<p>Click register to confirm your registration</p></div>-->
+	
     <button type="submit" class="registerbtn" value="OK" >Register</button>
     <!-- onsubmit="return ValidateEmail(document.registerform.email)"  -->
   </div>
@@ -1632,6 +1637,11 @@ Select Team Size
         <p>
 
     Your Registration ID is {{id}}, <br> The total Amount to be paid is Rs {{total_cost }}/- Only<br><br> For Query Contact
+	<div id="googlepay"></div>
+	Some text
+	<div id="phonepay"></div>
+	some text<br>
+
     <ul id="contactid">
       <li><b style="font-family:'montserratbold';color: #262626;font-size: 32px;">Contact Us</b></li><br>
       <li>Name : Dinesh Kumar</li>
