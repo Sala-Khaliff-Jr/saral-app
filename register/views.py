@@ -117,14 +117,14 @@ def register_view(request):
         
         print(events)
 
-        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events)
+        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
         register = Registrations.objects.get(email_id=email_id)
         # print(Registrations.objects.filter(email_id=email_id))
         Registrations.objects.filter(email_id=email_id).update(reg_id="SARAL00"+str(register.id))   
         register = Registrations.objects.get(email_id=email_id)
         request.session['student_name'] = student_name
         request.session['email'] = email_id
-        return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id}))
+        return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id,'total_cost':total_cost}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
         # except:

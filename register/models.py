@@ -7,7 +7,7 @@ class Registrations(models.Model):
     email_id = models.EmailField(unique=True)
     reg_id = models.CharField(unique=True,max_length=16)
     events = models.CharField(blank=False,null=False,max_length=300)
-
+    total_cost = models.CharField(blank=False,null=False,max_length=10)
     
     def __str__(self):
         return self.student_name+" "+self.reg_id
