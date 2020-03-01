@@ -6,6 +6,18 @@ def scribble_view(request):
 
 def brush_hour_view(request):
     return render(request,'category2/brushhour.html')
+def henna_art_view(request):
+    return render(request,'category2/hennaart.html')
+
+def war_of_words_view(request):
+    return render(request,'category2/warofwords.html')
+
+def the_underrated_trouper_view(request):
+    return render(request,'category2/theunderratedtrouper.html')
+
+def anniyan_view(request):
+    return render(request,'caetegory2/anniyan.html')
+
 
 def just_a_min_view(request):
     return render(request,'category2/justamin.html')    

@@ -1545,20 +1545,20 @@ Select Team Size
 <div id="cat3" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom" style="text-align:left;"><span id="t1">
-<b>PUBG MOBILE</b> &nbsp
-<input type="checkbox" class="cb" value="PUBG">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<b>PUBG MOBILE</b> 
+<input type="checkbox" class="cb" value="PUBG">
 <label for="solo">Solo</label>
 <input type="checkbox" id="solo" name="mobsolo" value="solo">
 <br>
 <b>FREE FIRE MOBILE</b>
-<input type="checkbox" class="cb" value="Free Fire">&nbsp&nbsp&nbsp
+<input type="checkbox" class="cb" value="Free Fire">
 <label for="squad">Squad</label>
 <input type="checkbox" id="squad" name="mobsquad" value="squad"></div></span></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom" style="text-align:left;"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp 
-<input type="checkbox" class="cb" value="COD">&nbsp&nbsp&nbsp<label for="solopc">Solo</label>
+<input type="checkbox" class="cb" value="COD"><label for="solopc">Solo</label>
 <input type="checkbox" id="solopc" name="pcsolo" value="solopc"><br><b>NFS MostWanted</b>
-<input type="checkbox" class="cb" value="NFS MW">&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="checkbox" class="cb" value="NFS MW">
 <label for="squadpc">Squad</label>
 <input type="checkbox" id="squadpc" name="pcsquad" value="squadpc"></div></span></div>
 <div class="bxes1"></div>
@@ -1573,11 +1573,13 @@ Select Team Size
 
 </form>
     {% elif submit == 'ALREADY' %}
+      <centre>    
       <p>You have already Registered {{student_name}}<br></p>
-    {% else %}
-    <p>You have succesfully regsitered</p><hr>
-    <br>Thanks For Registering {{ student_name }} 
-    <p>
+        {% else %}
+        <p>You have succesfully regsitered</p><hr>
+        <br>Thanks For Registering {{ student_name }} 
+        <p>
+        </centre>>
     Your Registration ID is{{id}}, <br><br> For Query Contact
     <ul id="contactid">
       <li><b style="font-family:'montserratbold';color: #262626;font-size: 32px;">Contact Us</b></li><br>
