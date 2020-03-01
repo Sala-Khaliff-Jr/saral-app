@@ -29,7 +29,6 @@ input:invalid{
   border-color: red;
 } */
 
-
 .a1{
 width:28%;
 height:50px;
@@ -45,21 +44,21 @@ color:white;
 }
 
 .bxes{
-width: 18%;
+width: 20%;
 height:340px;
 background-color:#333;
 float:left;
-margin-left:70px;
+margin-left:30px;
 margin-right:60px;
 margin-top:25px;
 }
 
 .bxes1{
-width: 18%;
+width: 20%;
 height:340px;
 background-color:white;
 float:left;
-margin-left:70px;
+margin-left:30px;
 margin-right:60px;
 margin-top:25px;
 }
@@ -81,6 +80,48 @@ font-size:22px;
 }
 #t1{
 font-size:16px;
+}
+
+
+@media only screen and (min-width : 300px) and (max-width: 480px) {
+.bxes{
+width:300px;
+height:350px;
+float:left;
+margin-bottom: 10px;
+margin-left: 10px;
+}
+
+.bottom{
+height:40%;
+width:100%;
+background-color:#333;
+color:white;
+font-family:calibri;
+text-align:center;
+font-size:22px;
+}
+
+#t1{
+position:relative;
+bottom:8px;
+}
+#b1 .bxes{
+width:0px;
+height:0px;
+}
+.bxes1{
+display : none;
+}
+.a1{
+width:85%;
+height:50px;
+border:none;
+background-color:#f1f1f1;
+border-right:2px solid #333;
+border-left:2px solid #333;
+cursor:pointer;
+}
 }
 
 
@@ -1545,28 +1586,31 @@ Select Team Size
 <div class="bxes1"></div>
 </div>
 
+
 <div id="cat3" class="w3-container cat" style="display:none">
-<div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom" style="text-align:left;"><span id="t1">
-<b>PUBG MOBILE</b> 
-<input type="checkbox" class="cb" value="PUBG">
-<label for="solo">Solo</label>
-<input type="checkbox" id="solo" name="mobsolo" value="solo">
-<br>
-<b>FREE FIRE MOBILE</b>
-<input type="checkbox" class="cb" value="Free Fire">
-<label for="squad">Squad</label>
-<input type="checkbox" id="squad" name="mobsquad" value="squad"></div></span></div>
-<div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom" style="text-align:left;"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp 
-<input type="checkbox" class="cb" value="COD"><label for="solopc">Solo</label>
-<input type="checkbox" id="solopc" name="pcsolo" value="solopc"><br><b>NFS MostWanted</b>
-<input type="checkbox" class="cb" value="NFS MW">
-<label for="squadpc">Squad</label>
-<input type="checkbox" id="squadpc" name="pcsquad" value="squadpc"></div></span></div>
-<div class="bxes1"></div>
-<div class="bxes1"></div>
-</div>
+  <div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
+  <div class="bottom" style="text-align:left;"><span id="t1">
+  <b>&nbsp&nbspPUBG MOBILE</b> &nbsp
+  <input type="checkbox" class="cb" value="PUBG">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <label for="solo">&nbsp Solo</label>
+  <input type="checkbox" id="solo" name="mobsolo" value="solo">
+  <br>
+  <b>&nbsp&nbspFREE FIRE MOBILE</b>
+  <input type="checkbox" class="cb" value="Free Fire">&nbsp&nbsp&nbsp
+  <label for="squad">Squad</label>
+  <input type="checkbox" id="squad" name="mobsquad" value="squad"></div></span></div>
+  <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+  <div class="bottom" style="text-align:left;"><span id="t1"><b>&nbsp&nbspCALL OF DUTY PC</b> &nbsp 
+  <input type="checkbox" class="cb" value="COD">&nbsp&nbsp&nbsp&nbsp<label for="solopc">Solo</label>
+  <input type="checkbox" id="solopc" name="pcsolo" value="solopc"><br><b>&nbsp&nbspNFS MostWanted</b>
+  <input type="checkbox" class="cb" value="NFS MW">&nbsp&nbsp&nbsp&nbsp&nbsp
+  <label for="squadpc">Squad</label>
+  <input type="checkbox" id="squadpc" name="pcsquad" value="squadpc"></div></span></div>
+  <div class="bxes1"></div>
+  <div class="bxes1"></div>
+  </div>
+  
+
 </div>
    <hr>
     <p>Click register to confirm your registration</p>

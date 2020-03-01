@@ -23,12 +23,12 @@ def register_view(request):
             print("Not Existing")
         else:
             print("Existing")
-            return render(request,'register.html',{'submit':'EXISTINGID'})
+            return render(request,'index.html')
 
         student_name = request.POST.get('name')
         college_name = request.POST.get('college')
         
-        print(college_name)
+        # print(college_name)
 
 
         events = ""
@@ -119,6 +119,7 @@ def register_view(request):
 
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
         register = Registrations.objects.get(email_id=email_id)
+        
         # print(Registrations.objects.filter(email_id=email_id))
         Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
         register = Registrations.objects.get(email_id=email_id)
