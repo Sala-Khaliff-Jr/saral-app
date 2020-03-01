@@ -22,10 +22,12 @@ def register_view(request):
             print("Not Existing")
         else:
             print("Existing")
+            return render(request,'register.html',{'submit':'EXISTINGID'})
         student_name = request.POST.get('name')
-
         college_name = request.POST.get('college')
-
+        poster_design = request.POST.get('POSTER DESIGN')
+        meme_creation = request.POST.get('MEME CREATION')
+        print(poster_design,meme_creation)
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000))
         register = Registrations.objects.get(email_id=email_id)
         # print(Registrations.objects.filter(email_id=email_id))

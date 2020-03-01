@@ -96,8 +96,6 @@ cursor:pointer;
 }
 }
 
-
-
 @media only screen and (min-width : 700px) and (max-width: 800px) {
 .bxes{
 width:300px;
@@ -190,15 +188,20 @@ a {
     <h1>Register</h1>
     <p>Please fill in the below details</p>
     <hr>
-
-    <label for="email"><b>Name</b></label>
+    
+    <label for="name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="name" required>
 
     <label for="college"><b>College</b></label>
-    <input type="text" placeholder="Enter Email" name="college" required>
-
+    <input type="text" placeholder="Enter College Name" name="college" required>
+    
+    {% if submit == 'EXISTINGID' %}
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
+    {% else %}
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    {% endif %}
 	<b>Select Events</b>
 <div class="wrapper">
 <div class="w3-bar w3-black">
@@ -211,60 +214,78 @@ a {
 
 <div class="bxes">
 <div class="top" style="background-image:url(static/img/speaker1.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>POSTER DESIGN &nbsp </b><input type="checkbox" class="cb" value="POSTER DESIGN"></div>
+<div class="bottom"><b>POSTER DESIGN &nbsp 
+</b><input type="checkbox" class="cb" name="POSTER DESIGN"></div>
 </div>
+
 <div class="bxes">
+
 <div class="top" style="background-image:url(static/img/speaker2.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>MEME CREATION &nbsp </b><input type="checkbox" class="cb" value="MEME CREATION"></div>
+<div class="bottom"><b>MEME CREATION &nbsp </b>
+  <input type="checkbox" class="cb" name="MEME CREATION"></div>
 </div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker3.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>Third Eye &nbsp </b><input type="checkbox" class="cb" value="THIRD EYE"></div></div>
+<div class="bottom"><b>Third Eye &nbsp </b><input type="checkbox" class="cb" name="THIRD EYE"></div></div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>INK IT &nbsp </b><input type="checkbox" class="cb" value="INK IT"></div></div>
+<div class="bottom"><b>INK IT &nbsp </b><input type="checkbox" class="cb" name="INK IT"></div></div>
 
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>NAALAIYA BHARATHI &nbsp </b><input type="checkbox" class="cb" value="NAALAIYA BHARATHI"></div></div>
+<div class="bottom"><b>NAALAIYA BHARATHI &nbsp </b><input type="checkbox" class="cb" name="NAALAIYA BHARATHI"></div></div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>PEN A POEM &nbsp </b><input type="checkbox" class="cb" value="PEN A POEM"></div></div>
+<div class="bottom"><b>PEN A POEM &nbsp </b><input type="checkbox" class="cb" name="PEN A POEM"></div></div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" value="DIRECTOR'S CHAIR"></div></div>
+<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" name="DIRECTOR'S CHAIR"></div></div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/jstamin.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>JUST A MINUTE &nbsp </b><input type="checkbox" class="cb" value="JUST A MINUTE"></div></div>
+<div class="bottom"><b>JUST A MINUTE &nbsp </b><input type="checkbox" class="cb" name="JUST A MINUTE"></div></div>
 
 </div>
 
 <div id="cat2" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/scribble.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>SCRIBBLES &nbsp </b><input type="checkbox" class="cb" value="SCRIBBLES"></div></div>
+
+<div class="bottom"><b>SCRIBBLES &nbsp </b><input type="checkbox" class="cb" name="SCRIBBLES"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/painting.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>BRUSH HOUR &nbsp </b><input type="checkbox" class="cb" value="BRUSH HOUR"></div></div>
+
+<div class="bottom"><b>BRUSH HOUR &nbsp </b><input type="checkbox" class="cb" name="BRUSH HOUR"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>HENNA ART &nbsp </b><input type="checkbox" class="cb" value="HENNA ART"></div></div>
+
+<div class="bottom"><b>HENNA ART &nbsp </b><input type="checkbox" class="cb" name="HENNA ART"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/debate.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>WAR OF WORDS &nbsp </b><input type="checkbox" class="cb" value="WAR OF WORDS"></div></div>
 
+<div class="bottom"><b>WAR OF WORDS &nbsp </b><input type="checkbox" class="cb" name="WAR OF WORDS"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/dance.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>GROOVE & GLAM &nbsp </b><input type="checkbox" class="cb" value="GROOVE & GLAM"></div></div>
-<div class="bxes"><div class="top" style="background-image:url(static/img/solodance.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>SHAKE IT UP &nbsp </b><input type="checkbox" class="cb" value="SHAKE IT UP"></div></div>
-<div class="bxes"><div class="top" style="background-image:url(static/img/singing.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>RAGA &nbsp </b><input type="checkbox" class="cb" value="RAGA"></div></div>
-<div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>LISTEN TO MY BEAT &nbsp </b><input type="checkbox" class="cb" value="LISTEN TO MY BEAT"></div></div>
 
+<div class="bottom"><b>GROOVE & GLAM &nbsp </b><input type="checkbox" class="cb" name="GROOVE & GLAM"></div></div>
+<div class="bxes"><div class="top" style="background-image:url(static/img/solodance.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+
+<div class="bottom"><b>SHAKE IT UP &nbsp </b><input type="checkbox" class="cb" name="SHAKE IT UP"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/singing.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>ANNIYAN &nbsp </b><input type="checkbox" class="cb" value="ANNIYAN"></div></div>
+
+<div class="bottom"><b>RAGA &nbsp </b><input type="checkbox" class="cb" name="RAGA"></div></div>
+<div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+
+<div class="bottom"><b>LISTEN TO MY BEAT &nbsp </b><input type="checkbox" class="cb" name="LISTEN TO MY BEAT"></div></div>
+<div class="bxes"><div class="top" style="background-image:url(static/img/singing.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+
+<div class="bottom"><b>ANNIYAN &nbsp </b><input type="checkbox" class="cb" name="ANNIYAN"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b><input type="checkbox" class="cb" value="THE UNDERRATED TROUPER"></div></div>
+
+<div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b><input type="checkbox" class="cb" name="THE UNDERRATED TROUPER"></div></div>
+
 <div class="bxes1"></div>
 <div class="bxes1"></div>
 </div>
 
 <div id="cat3" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1"><b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" value="PUBG"><br><b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" value="Free Fire"></div></span></div>
+<div class="bottom"><span id="t1"><b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" name="PUBG"><br><b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" value="Free Fire"></div></span></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" value="COD"><br><b>NFS MOST WANTED</b><input type="checkbox" class="cb" value="NFS MW"></div></span></div>
+<div class="bottom"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" name="COD"><br><b>NFS MOST WANTED</b><input type="checkbox" class="cb" value="NFS MW"></div></span></div>
 <div class="bxes1"></div>
 <div class="bxes1"></div>
 </div>
@@ -284,7 +305,6 @@ a {
     </p>
     <a href="index">Go Home</a>
     {% endif %}
-
 <script>
 function openCity(catName) {
   var i;
