@@ -8,7 +8,7 @@ def register_view(request):
             student_name = request.session['student_name']
             return(render(request,'register.html',{'submit':'ALREADY','student_name':student_name }))
         else:
-            return(render(request,'register.html',{'submit':'NO'}))
+            return(render(request,'register.html',{'submit':'NO','EVENTSELECT':'NO'}))
     if(request.method=="POST"):
         # print(request.POST.get('name'))
         # print(request.POST.get('college'))
@@ -17,7 +17,8 @@ def register_view(request):
         
         # try :
             
-        print(Registrations.objects.filter(email_id=email_id))
+        print('Email Present',Registrations.objects.filter(email_id=email_id))
+
         if not Registrations.objects.filter(email_id=email_id):
             print("Not Existing")
         else:
@@ -26,14 +27,58 @@ def register_view(request):
         student_name = request.POST.get('name')
         college_name = request.POST.get('college')
         events = ""
+        total_cost = 0
         if request.POST.get('POSTER DESIGN') == 'on':
             events += "Poster Design, "
+            total_cost += 100
         if request.POST.get('MEME CREATION') == 'on':
             events += "Meme Creation, "
-        
-        
-
+        if request.POST.get('THIRD EYE') == 'on':
+            events += "Third Eye, "
+        if request.POST.get('INK IT') == 'on':
+            events += "Ink It, "
+        if request.POST.get('NAALAIYA BHARATHI') == 'on':
+            events += "Naalaiya Bharathi, "
+        if request.POST.get('PEN A POEM') == 'on':
+            events += "Pen A Poem, "
+        if request.POST.get('DIRECTOR CHAIR') == 'on':
+            events += "Director's Chair, "
+        if request.POST.get('JUST A MINUTE') == 'on':
+            events += "Just A Minute, "
+        if request.POST.get('THIRD EYE') == 'on':
+            events += "Third Eye, "
+        if request.POST.get('SCRIBBLES') == 'on':
+            events += "Scribbles, "
+        if request.POST.get('BRUSH HOUR') == 'on':
+            events += "Brush Hour, "
+        if request.POST.get('HENNA ART') == 'on':
+            events += "Henna Art, "
+        if request.POST.get('WAR OF WORDS') == 'on':
+            events += "War of Words, "
+        if request.POST.get('GROOVE & GLAM') == 'on':
+            events += "Groove and Glam, "
+        if request.POST.get('SHAKE IT UP') == 'on':
+            events += "Shake It Up, "
+        if request.POST.get('RAGA') == 'on':
+            events += "Raga, "
+        if request.POST.get('LISTEN TO MY BEAT') == 'on':
+            events += "Listen To My Beat, "
+        if request.POST.get('ANNIYAN') == 'on':
+            events += "Anniyan, "
+        if request.POST.get('THE UNDERRATED TROUPER') == 'on':
+            events += "The Underrated Trouper, "
+        if request.POST.get('PUBG') == 'on':
+            events += "Pubg, "
+        if request.POST.get('NFS MW') == 'on':
+            events += "NFS Most Wanted, "
+        if request.POST.get('COD') == 'on':
+            events += "COD, "
+        if request.POST.get('Free Fire') == 'on':
+            events += "Free Fire, "
+        if (len(events) < 3):
+            return render(request,'register.html',{'EVENTSELECT':'No'})
         print(events)
+
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events)
         register = Registrations.objects.get(email_id=email_id)
         # print(Registrations.objects.filter(email_id=email_id))
@@ -42,7 +87,6 @@ def register_view(request):
         request.session['student_name'] = student_name
         request.session['email'] = email_id
         return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id}))
-        
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
         # except:

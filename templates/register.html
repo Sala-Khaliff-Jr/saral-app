@@ -3,24 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  
 body{
-margin:0px auto;
-padding:0px auto;
+  margin:0px auto;
+  padding:0px auto;
 }
 .wrapper{
-width:100%;
-height:fit-content;
-background-color:white;
+  width:100%;
+  height:fit-content;
+  background-color:white;
 }
 .a1{
-width:31.5%;
-height:50px;
-border:none;
-background-color:#f1f1f1;
-margin-left:20px;
-border-right:2px solid #333;
-border-left:2px solid #333;
-cursor:pointer;
+  width:31.5%;
+  height:50px;
+  border:none;
+  background-color:#f1f1f1;
+  margin-left:20px;
+  border-right:2px solid #333;
+  border-left:2px solid #333;
+  cursor:pointer;
 }
 .a1:hover{
 background-color:#333;
@@ -28,23 +29,23 @@ color:white;
 }
 
 .bxes{
-width: 16%;
-height:300px;
-background-color:#333;
-float:left;
-margin-left:70px;
-margin-right:60px;
-margin-top:25px;
+  width: 16%;
+  height:300px;
+  background-color:#333;
+  float:left;
+  margin-left:70px;
+  margin-right:60px;
+  margin-top:25px;
 }
 
 .bxes1{
-width: 16%;
-height:300px;
-background-color:white;
-float:left;
-margin-left:70px;
-margin-right:60px;
-margin-top:25px;
+  width: 16%;
+  height:300px;
+  background-color:white;
+  float:left;
+  margin-left:70px;
+  margin-right:60px;
+  margin-top:25px;
 }
 
 
@@ -55,44 +56,44 @@ background-color:grey;
 }
 
 .bottom{
-height:30%;
-width:100%;
-background-color:#333;
-color:white;
-font-family:calibri;
-text-align:center;
-font-size:22px;
+  height:30%;
+  width:100%;
+  background-color:#333;
+  color:white;
+  font-family:calibri;
+  text-align:center;
+  font-size:22px;
 }
 #t1{
 font-size:16px;
 }
 @media only screen and (min-width : 300px) and (max-width: 480px) {
 .bxes{
-width:300px;
-height:270px;
-float:left;
-margin-bottom: 10px;
-margin-left: 30px;
+  width:300px;
+  height:270px;
+  float:left;
+  margin-bottom: 10px;
+  margin-left: 30px;
 }
 #t1{
 position:relative;
 bottom:8px;
 }
 #b1 .bxes{
-width:0px;
-height:0px;
+  width:0px;
+  height:0px;
 }
 .bxes1{
 display : none;
 }
 .a1{
-width:85%;
-height:50px;
-border:none;
-background-color:#f1f1f1;
-border-right:2px solid #333;
-border-left:2px solid #333;
-cursor:pointer;
+  width:85%;
+  height:50px;
+  border:none;
+  background-color:#f1f1f1;
+  border-right:2px solid #333;
+  border-left:2px solid #333;
+  cursor:pointer;
 }
 }
 
@@ -109,24 +110,24 @@ margin-left: 80px;
 
 <!-- @media only screen and (max-width: 480px) {
 .bxes{
-width:75%;
-height:250px;
-float:left;
+  width:75%;
+  height:250px;
+  float:left; 
 }
 }
 
 @media only screen and (max-width: 800px) {
 .bxes{
-width:80%;
-height:250px;
-float:left;
+  width:80%;
+  height:250px;
+  float:left;
 }
 } -->
 input.cb{
-width:18px;
-height:18px;
-margin-top:20px;
-border:none;
+  width:18px;
+  height:18px;
+  margin-top:20px;
+  border:none;
 }
 * {
   box-sizing: border-box;
@@ -178,6 +179,7 @@ hr {
 a {
   color: dodgerblue;
 </style>
+
 </head>
 <body>
 {% if submit == 'NO' %}
@@ -213,7 +215,7 @@ a {
 <div id="cat1" class="w3-container cat">
 
 <div class="bxes">
-<div class="top" style="background-image:url(static/img/speaker1.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+<div class="top" stylebackground-image:url(static/img/speaker1.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>POSTER DESIGN &nbsp 
 </b><input type="checkbox" class="cb" name="POSTER DESIGN"></div>
 </div>
@@ -238,7 +240,7 @@ a {
 <div class="bottom"><b>PEN A POEM &nbsp </b><input type="checkbox" class="cb" name="PEN A POEM"></div></div>
 
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" name="DIRECTOR'S CHAIR"></div></div>
+<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" name="DIRECTOR CHAIR"></div></div>
 
 <div class="bxes"><div class="top" style="background-image:url(static/img/jstamin.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>JUST A MINUTE &nbsp </b><input type="checkbox" class="cb" name="JUST A MINUTE"></div></div>
@@ -283,9 +285,15 @@ a {
 
 <div id="cat3" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1"><b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" name="PUBG"><br><b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" value="Free Fire"></div></span></div>
+<div class="bottom"><span id="t1">
+<b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" name="PUBG"><br>
+<b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" name="Free Fire"></div></span></div>
+
 <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" name="COD"><br><b>NFS MOST WANTED</b><input type="checkbox" class="cb" value="NFS MW"></div></span></div>
+<div class="bottom"><span id="t1">
+<b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" name="COD"><br>
+<b>NFS MOST WANTED</b><input type="checkbox" class="cb" name="NFS MW"></div></span></div>
+
 <div class="bxes1"></div>
 <div class="bxes1"></div>
 </div>
@@ -305,16 +313,6 @@ a {
     </p>
     <a href="index">Go Home</a>
     {% endif %}
-<script>
-function openCity(catName) {
-  var i;
-  var x = document.getElementsByClassName("cat");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  document.getElementById(catName).style.display = "block";  
-}
-</script>
 
 </body>
 </html>
