@@ -21,7 +21,6 @@ input{
   border-radius: 5px;
 }
 
-
 input:invalid{
   border-color: red;
 }
@@ -207,8 +206,7 @@ a{
 </head>
 <body>
 {% if submit == 'NO' %}
-/* onsubmit="return ValidateEmail(document.registerform.email)" */
-<form action="register" name = "registerform" method='POST'>
+<form action="register" name = "registerform" method='POST' onsubmit="return ValidateEmail(document.registerform.email)" >
 {% csrf_token %}
   <div class="container">
     <h1>Register</h1>
@@ -218,10 +216,7 @@ a{
     <label for="name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="name" required>
 
-    /* <label for="college"><b>College</b></label>
-    <input type="text" placeholder="Enter Email" name="college" required> */
-
-    <label for="email"><b>Email</b></label>
+    <label for="email"><b>Email</b><br></label>
     <input type="email" placeholder="Enter Email" name="email" required>
 	
 	<b>College</b></br>
@@ -1567,7 +1562,7 @@ Select Team Size
    <hr>
     <p>Click register to confirm your registration</p>
     <button type="submit" class="registerbtn" value="OK" >Register</button>
-    /* onclick="ValidateEmail(document.registerform.email)" */
+    <!-- onsubmit="return ValidateEmail(document.registerform.email)"  -->
   </div>
 
 </form>
@@ -1585,7 +1580,7 @@ Select Team Size
 	
 <script>
 
-/* function ValidateEmail(inputText)
+function ValidateEmail(inputText)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 if(inputText.value.match(mailformat))
@@ -1599,7 +1594,7 @@ alert("You have entered an invalid email address!");
 document.registerform.email.focus();
 return false;
 }
-} */
+}
 
 function openCity(catName) {
   var i;
