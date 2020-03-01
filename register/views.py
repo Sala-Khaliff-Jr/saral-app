@@ -28,7 +28,7 @@ def register_view(request):
         student_name = request.POST.get('name')
         college_name = request.POST.get('college')
         
-        # print(college_name)
+        print(college_name)
 
 
         events = ""
@@ -36,9 +36,11 @@ def register_view(request):
         if request.POST.get('POSTER DESIGN') == 'on':
             events += "Poster Design, "
             total_cost += 100
+            print(events)
         if request.POST.get('MEME CREATION') == 'on':
             events += "Meme Creation, "
-            total_cost += 100 
+            total_cost += 100
+            print(events) 
         if request.POST.get('THIRD EYE') == 'on':
             events += "Third Eye, "
             total_cost += 100
@@ -88,7 +90,7 @@ def register_view(request):
         if request.POST.get('THE UNDERRATED TROUPER') == 'on':
             events += "The Underrated Trouper, "
             total_cost += 100
-
+        print(events)
         if request.POST.get('PUBG') == 'on':
             events += "Pubg, "
             if request.POST.get('mobsolo') == 'on':
@@ -113,21 +115,23 @@ def register_view(request):
             if request.POST.get('mobsolo') == 'pcsquad':
                 total_cost += 500 
         if (len(events) < 3 and total_cost < 50):
+            print(events,total_cost)
             return render(request,'register.html',{'submit':'NO','EVENTSELECT':'No'})
         
-        # print(events)
-        try:
-            Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
-            register = Registrations.objects.get(email_id=email_id)
-            
-            # print(Registrations.objects.filter(email_id=email_id))
-            Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
-            register = Registrations.objects.get(email_id=email_id)
-            request.session['student_name'] = student_name
-            request.session['email'] = email_id
-            return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id,'total_cost':total_cost}))
-        except:
-            return(render(request,'register.html',{'submit':'NO'}))
+        print(events)
+        # try:
+        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
+        register = Registrations.objects.get(email_id=email_id)
+        
+        print(Registrations.objects.filter(email_id=email_id))
+        Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
+        register = Registrations.objects.get(email_id=email_id)
+        request.session['student_name'] = student_name
+        request.session['email'] = email_id
+        print("successfully created")
+        return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id,'total_cost':total_cost}))
+        # except:
+        #     return(render(request,'register.html',{'submit':'NO'}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
 
