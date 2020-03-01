@@ -6,8 +6,7 @@ class Registrations(models.Model):
     college_name = models.CharField(blank=False,null=False,max_length=50)
     email_id = models.EmailField(unique=True)
     reg_id = models.CharField(unique=True,max_length=16)
-
-    events = models.charField(blank=False,null=False,max_length=300)
+    events = models.CharField(blank=False,null=False,max_length=300)
 
     
     def __str__(self):

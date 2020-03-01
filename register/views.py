@@ -29,9 +29,12 @@ def register_view(request):
         if request.POST.get('POSTER DESIGN') == 'on':
             events += "Poster Design, "
         if request.POST.get('MEME CREATION') == 'on':
-            events += "Meme Ceration, "
+            events += "Meme Creation, "
+        
+        
+
         print(events)
-        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000))
+        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events)
         register = Registrations.objects.get(email_id=email_id)
         # print(Registrations.objects.filter(email_id=email_id))
         Registrations.objects.filter(email_id=email_id).update(reg_id="SARAL00"+str(register.id))   
