@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <style>
 body{
 margin:0px auto;
@@ -12,6 +13,20 @@ width:100%;
 height:fit-content;
 background-color:white;
 }
+
+input{
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+input:invalid{
+  border-color: red;
+}
+
+
 .a1{
 width:28%;
 height:50px;
@@ -185,13 +200,14 @@ hr {
 }
 
 /* Add a blue text color to links */
-a {
+a{
   color: dodgerblue;
+}  
 </style>
 </head>
 <body>
 {% if submit == 'NO' %}
-
+/* onsubmit="return ValidateEmail(document.registerform.email)" */
 <form action="register" name = "registerform" method='POST'>
 {% csrf_token %}
   <div class="container">
@@ -199,14 +215,14 @@ a {
     <p>Please fill in the below details</p>
     <hr>
 
-    <label for="email"><b>Name</b></label>
+    <label for="name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="name" required>
 
     /* <label for="college"><b>College</b></label>
     <input type="text" placeholder="Enter Email" name="college" required> */
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="email" placeholder="Enter Email" name="email" required>
 	
 	<b>College</b></br>
 	<select name="college" data-live-search="true" class="form-control" id="id_college">
@@ -1550,7 +1566,8 @@ Select Team Size
 </div>
    <hr>
     <p>Click register to confirm your registration</p>
-    <button type="submit" class="registerbtn" value="OK" onclick="ValidateEmail(document.registerform.email)"">Register</button>
+    <button type="submit" class="registerbtn" value="OK" >Register</button>
+    /* onclick="ValidateEmail(document.registerform.email)" */
   </div>
 
 </form>
@@ -1568,7 +1585,7 @@ Select Team Size
 	
 <script>
 
-function ValidateEmail(inputText)
+/* function ValidateEmail(inputText)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 if(inputText.value.match(mailformat))
@@ -1582,7 +1599,7 @@ alert("You have entered an invalid email address!");
 document.registerform.email.focus();
 return false;
 }
-}
+} */
 
 function openCity(catName) {
   var i;
