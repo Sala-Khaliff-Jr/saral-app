@@ -53,7 +53,7 @@ def register_view(request):
             total_cost += 100
         if request.POST.get('DIRECTOR CHAIR') == 'on':
             events += "Director's Chair, "
-            total_cost += 300
+            total_cost += 500
         if request.POST.get('JUST A MINUTE') == 'on':
             events += "Just A Minute, "
             total_cost += 100
@@ -72,7 +72,7 @@ def register_view(request):
         if request.POST.get('GROOVE & GLAM') == 'on':
             events += "Groove and Glam, "
             gndgteam_size = int(request.POST.get('gndgteamsize'))
-            total_cost += gndgteamsize * 50
+            total_cost += 600
         if request.POST.get('SHAKE IT UP') == 'on':
             events += "Shake It Up, "
             total_cost += 100
@@ -115,19 +115,19 @@ def register_view(request):
         if (len(events) < 3 and total_cost < 50):
             return render(request,'register.html',{'submit':'NO','EVENTSELECT':'No'})
         
-        print(events)
-
-        Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
-        register = Registrations.objects.get(email_id=email_id)
-        
-        # print(Registrations.objects.filter(email_id=email_id))
-        Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
-        register = Registrations.objects.get(email_id=email_id)
-        request.session['student_name'] = student_name
-        request.session['email'] = email_id
-        return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id,'total_cost':total_cost}))
-        # except:
-        #     return(render(request,'register.html',{'submit':'NO'}))
+        # print(events)
+        try:
+            Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events,total_cost=total_cost)
+            register = Registrations.objects.get(email_id=email_id)
+            
+            # print(Registrations.objects.filter(email_id=email_id))
+            Registrations.objects.filter(email_id=email_id).update(reg_id="SAARAL00"+str(register.id))   
+            register = Registrations.objects.get(email_id=email_id)
+            request.session['student_name'] = student_name
+            request.session['email'] = email_id
+            return(render(request,'register.html',{'submit':'Yes','student_name':student_name,'id':register.reg_id,'total_cost':total_cost}))
+        except:
+            return(render(request,'register.html',{'submit':'NO'}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
 
