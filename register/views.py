@@ -112,8 +112,8 @@ def register_view(request):
                 total_cost += 100
             if request.POST.get('mobsolo') == 'pcsquad':
                 total_cost += 500 
-        if (len(events) < 3):
-            return render(request,'register.html',{'EVENTSELECT':'No'})
+        if (len(events) < 3 and total_cost < 50):
+            return render(request,'register.html',{'submit':'NO','EVENTSELECT':'No'})
         
         print(events)
 
