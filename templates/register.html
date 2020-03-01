@@ -3,25 +3,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  
 body{
-  margin:0px auto;
-  padding:0px auto;
+margin:0px auto;
+padding:0px auto;
 }
 .wrapper{
-  width:100%;
-  height:fit-content;
-  background-color:white;
+width:100%;
+height:fit-content;
+background-color:white;
 }
 .a1{
-  width:31.5%;
-  height:50px;
-  border:none;
-  background-color:#f1f1f1;
-  margin-left:20px;
-  border-right:2px solid #333;
-  border-left:2px solid #333;
-  cursor:pointer;
+width:28%;
+height:50px;
+border:none;
+background-color:#f1f1f1;
+border-right:2px solid #333;
+border-left:2px solid #333;
+cursor:pointer;
 }
 .a1:hover{
 background-color:#333;
@@ -29,23 +27,23 @@ color:white;
 }
 
 .bxes{
-  width: 16%;
-  height:300px;
-  background-color:#333;
-  float:left;
-  margin-left:70px;
-  margin-right:60px;
-  margin-top:25px;
+width: 16%;
+height:300px;
+background-color:#333;
+float:left;
+margin-left:70px;
+margin-right:60px;
+margin-top:25px;
 }
 
 .bxes1{
-  width: 16%;
-  height:300px;
-  background-color:white;
-  float:left;
-  margin-left:70px;
-  margin-right:60px;
-  margin-top:25px;
+width: 16%;
+height:300px;
+background-color:white;
+float:left;
+margin-left:70px;
+margin-right:60px;
+margin-top:25px;
 }
 
 
@@ -56,46 +54,48 @@ background-color:grey;
 }
 
 .bottom{
-  height:30%;
-  width:100%;
-  background-color:#333;
-  color:white;
-  font-family:calibri;
-  text-align:center;
-  font-size:22px;
+height:30%;
+width:100%;
+background-color:#333;
+color:white;
+font-family:calibri;
+text-align:center;
+font-size:22px;
 }
 #t1{
 font-size:16px;
 }
 @media only screen and (min-width : 300px) and (max-width: 480px) {
 .bxes{
-  width:300px;
-  height:270px;
-  float:left;
-  margin-bottom: 10px;
-  margin-left: 30px;
+width:300px;
+height:270px;
+float:left;
+margin-bottom: 10px;
+margin-left: 30px;
 }
 #t1{
 position:relative;
 bottom:8px;
 }
 #b1 .bxes{
-  width:0px;
-  height:0px;
+width:0px;
+height:0px;
 }
 .bxes1{
 display : none;
 }
 .a1{
-  width:85%;
-  height:50px;
-  border:none;
-  background-color:#f1f1f1;
-  border-right:2px solid #333;
-  border-left:2px solid #333;
-  cursor:pointer;
+width:85%;
+height:50px;
+border:none;
+background-color:#f1f1f1;
+border-right:2px solid #333;
+border-left:2px solid #333;
+cursor:pointer;
 }
 }
+
+
 
 @media only screen and (min-width : 700px) and (max-width: 800px) {
 .bxes{
@@ -110,24 +110,24 @@ margin-left: 80px;
 
 <!-- @media only screen and (max-width: 480px) {
 .bxes{
-  width:75%;
-  height:250px;
-  float:left; 
+width:75%;
+height:250px;
+float:left;
 }
 }
 
 @media only screen and (max-width: 800px) {
 .bxes{
-  width:80%;
-  height:250px;
-  float:left;
+width:80%;
+height:250px;
+float:left;
 }
 } -->
 input.cb{
-  width:18px;
-  height:18px;
-  margin-top:20px;
-  border:none;
+width:18px;
+height:18px;
+margin-top:20px;
+border:none;
 }
 * {
   box-sizing: border-box;
@@ -175,11 +175,19 @@ hr {
   opacity: 1;
 }
 
+#id_college{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
 /* Add a blue text color to links */
 a {
   color: dodgerblue;
 </style>
-
 </head>
 <body>
 {% if submit == 'NO' %}
@@ -190,110 +198,1334 @@ a {
     <h1>Register</h1>
     <p>Please fill in the below details</p>
     <hr>
-    
-    <label for="name"><b>Name</b></label>
+
+    <label for="email"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="name" required>
 
     <label for="college"><b>College</b></label>
-    <input type="text" placeholder="Enter College Name" name="college" required>
-    
-    {% if submit == 'EXISTINGID' %}
+    <input type="text" placeholder="Enter Email" name="college" required>
+
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
-    {% else %}
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-    {% endif %}
+	
+	<b>College</b></br>
+	<select name="college" data-live-search="true" class="form-control" id="id_college">
+  <option value="" selected="">select a college</option>
+
+  <option value="others">Others</option>
+  <option value="597">AAA College of Engineering &amp; Technology</option>
+
+  <option value="4">Aalim Muhammed Salegh College Of Engineering</option>
+
+  <option value="5">Aarupadai Veedu Institute of Technology, Vinayaka Mission University</option>
+
+  <option value="6">ABES Engineering College , Ghaziabad</option>
+
+  <option value="7">ABV-IIITM, Gwalior</option>
+
+  <option value="8">ACCET Karaikudi</option>
+
+  <option value="2">A.C. College of Engineering and Technology</option>
+
+  <option value="9">Acharaya Nagarjuna University</option>
+
+  <option value="10">Achariya Bala Siksha Mandir</option>
+
+  <option value="11">Achariya College of Engineering and Technology</option>
+
+  <option value="599">Acharya Bangalore Business School - ABBS</option>
+
+  <option value="12">Acropolois Technical Campus</option>
+
+  <option value="13">ACT Anna University</option>
+
+  <option value="14">Adhiyamaan College of Engineering, Hosur</option>
+
+  <option value="15">Adithya Institute of Technology</option>
+
+  <option value="16">Agni College Of Technology</option>
+
+  <option value="17">Alagappa Chettiar College of Engineering and Technology, Karaikudi</option>
+
+  <option value="18">Al-Ameen Engineering College</option>
+
+  <option value="19">Al-Ameer College of Engineering and IT</option>
+
+  <option value="20">Alpha College of Engineering</option>
+
+  <option value="21">Alpha College of Engineering and Technology</option>
+
+  <option value="22">Amara Institute of Engineering and Technology</option>
+
+  <option value="23">American College</option>
+
+  <option value="24">AMET University</option>
+
+  <option value="25">Amity Institute of Space Science and Technology</option>
+
+  <option value="26">Amrita Vishwa Vidyapeetham, Amritapuri</option>
+
+  <option value="27">Amrita Vishwa Vidyapeetham, Bengaluru</option>
+
+  <option value="28">Amrita Vishwa Vidyapeetham, Coimbatore</option>
+
+  <option value="29">Amrita Vishwa Vidyapeetham, Kochi</option>
+
+  <option value="30">Amrita Vishwa Vidyapeetham, Mysore</option>
+
+  <option value="3">A.M.S College of Engineering</option>
+
+  <option value="31">AMS College of Engineering</option>
+
+  <option value="32">Anand Institute of Higher Technology</option>
+
+  <option value="33">Andhra University</option>
+
+  <option value="34">Angel College of Engineering and Technology</option>
+
+  <option value="35">Anil Neerukonda Institute Of Technology and Science</option>
+
+  <option value="36">Anjalai Ammal Mahalingam Engineering College</option>
+
+  <option value="39">Annamacharya Institute of Technology and Sciences, Tirupati</option>
+
+  <option value="40">Annamalai university</option>
+
+  <option value="37">Anna University - BIT Campus Tiruchirappalli</option>
+
+  <option value="38">Anna University School of Architecture and Planning</option>
+
+  <option value="41">Anuradha Engineering College Chikhali</option>
+
+  <option value="42">Apollo Priyadarshanam Institute of Technology</option>
+
+  <option value="43">Army Institute of Management and Technology</option>
+
+  <option value="44">Arunai Engineering College</option>
+
+  <option value="45">Audisankara College of Engineering and Technology(ASCET)</option>
+
+  <option value="46">Aurora's Scientific and Technological Institute</option>
+
+  <option value="579">Avinashilingam University - Arts and Science</option>
+
+  <option value="578">Avinashilingam University - Engineering</option>
+
+  <option value="47">AVN Institute of Engineering and Technology</option>
+
+  <option value="49">Babasaheb Bhimrao Ambedkar University</option>
+
+  <option value="50">Badruka College of Commerce and Arts</option>
+
+  <option value="51">Banasthali University</option>
+
+  <option value="52">Bandung Institute of Technology</option>
+
+  <option value="53">Bangalore Institute of Management Studies</option>
+
+  <option value="54">Bangalore Institute of Technology</option>
+
+  <option value="55">Bangladesh University of Engineering and Technology</option>
+
+  <option value="56">Bannari Amman Institute of Technology</option>
+
+  <option value="57">Bapatla Engineering College</option>
+
+  <option value="58">Bapatla Women's Engineering College</option>
+
+  <option value="59">Barathiyar University</option>
+
+  <option value="60">Bengal Engineering and Science University, Shibpur</option>
+
+  <option value="64">Bharathidasan Institute of Management</option>
+
+  <option value="65">Bharathidasan University</option>
+
+  <option value="66">Bharathiyar College of Engineering and Technology</option>
+
+  <option value="62">Bharath Niketan Engineering College</option>
+
+  <option value="63">Bharath University</option>
+
+  <option value="61">Bharat Institute of Engineering and Technology</option>
+
+  <option value="67">Bhoj Reddy Engineering College for Women</option>
+
+  <option value="68">Bhopal School of Social Sciences</option>
+
+  <option value="69">Birla Institute of Technology, Mesra</option>
+
+  <option value="70">Bishop Heber College</option>
+
+  <option value="71">BITS Pilani Hyderabad Campus</option>
+
+  <option value="72">BITS Pilani K.K. Birla Goa Campus</option>
+
+  <option value="73">BMS Engineering College</option>
+
+  <option value="74">BMS Institute of Technology</option>
+
+  <option value="75">Brindavan Institute of Technology and Science</option>
+
+  <option value="48">B.S.Abdur Rahman University</option>
+
+  <option value="76">BSA Crescent Engineering College</option>
+
+  <option value="77">C. Abdul Hakeem College of Engineering and Technology</option>
+
+  <option value="78">Canara Engineering College</option>
+
+  <option value="79">CARE School of Engineering</option>
+
+  <option value="80">Carnegie Mellon University</option>
+
+  <option value="81">CBM Arts and Science College</option>
+
+  <option value="82">Central Electro Chemical Research Institute</option>
+
+  <option value="83">Central University of Las Villas</option>
+
+  <option value="84">Chaitanya Engineering College</option>
+
+  <option value="85">Chaithanya Bharathi Institute of Technology(CBIT)</option>
+
+  <option value="86">Chalapathi Institute of Engineering and Technology</option>
+
+  <option value="87">Chandubhai S Patel Institute of Technology(CSPIT)</option>
+
+  <option value="88">Channabasaveshwara Institute of Technology</option>
+
+  <option value="89">Chendhuran College of Engineering and Technology</option>
+
+  <option value="90">Chennai Film School</option>
+
+  <option value="91">Chennai institute of technology</option>
+
+  <option value="92">Chennai Mathematical Institute</option>
+
+  <option value="93">Chettinad College of Engineering and Technology</option>
+
+  <option value="94">Christ the King Engineering College</option>
+
+  <option value="96">Christu Jyoti Institute of Technology  Science(CJITS)</option>
+
+  <option value="95">Christ University</option>
+
+  <option value="97">CMR Engineering College</option>
+
+  <option value="98">CMR Institute of Technology</option>
+
+  <option value="99">CMR Technical Campus</option>
+
+  <option value="591">CMS college of Engineering and Technology</option>
+
+  <option value="592">CMS college of Science and Commerce</option>
+
+  <option value="100">Cochin University of Science and Technology</option>
+
+  <option value="101">Coimbatore Institute of Engineering and Technology (CIET)</option>
+
+  <option value="102">Coimbatore Institute of Technology</option>
+
+  <option value="103">College of Applied Science, Vadakkencherry</option>
+
+  <option value="104">College of Engineering and Management Punnapra, Alappuzh</option>
+
+  <option value="105">College of Engineering and Technology, Bhubaneswar</option>
+
+  <option value="106">College of Engineering Chengannur</option>
+
+  <option value="109">College of Engineering, Guindy</option>
+
+  <option value="107">College of Engineering Thalassery</option>
+
+  <option value="108">College of Engineering Trivandrum, Kerala</option>
+
+  <option value="110">College of Technology, Pantnagar</option>
+
+  <option value="111">Comenius University in Bratislava</option>
+
+  <option value="112">CSI College of Engineering</option>
+
+  <option value="113">CVR College of Engineering</option>
+
+  <option value="116">Delhi College Of Engineering</option>
+
+  <option value="117">Delhi University</option>
+
+  <option value="114">D.G Vaishnav College</option>
+
+  <option value="118">Dhanalakshmi College of Engineering</option>
+
+  <option value="119">Dhanalakshmi Srinivasan College of Engineering and Technology</option>
+
+  <option value="120">Dhirajlal Gandhi College Of Technology</option>
+
+  <option value="121">DKTE Society's Textile and Engineering Institute, Ichalkaranji</option>
+
+  <option value="122">DMI College of engineering</option>
+
+  <option value="123">DMS Pondicherry University</option>
+
+  <option value="594">Dr.G.R.Damodaran College of Science</option>
+
+  <option value="115">D.R.K. College of Engineering and Technology</option>
+
+  <option value="124">Dr. Mahalingam College of Engineering and Technology</option>
+
+  <option value="126">Dr. Nallini Institution of Engineering and Technology</option>
+
+  <option value="601">Dr.N.G.P. Arts and Science College</option>
+
+  <option value="125">Dr. N.G.P. Institute of Technology</option>
+
+  <option value="130">Dronacharya College of Engineering</option>
+
+  <option value="127">Dr. RMLS College, Muzaffarpur</option>
+
+  <option value="129">Dr.RR  SR Technical University</option>
+
+  <option value="128">Dr. S.J.S Paul Memorial College of Engineering and Technology</option>
+
+  <option value="131">DVR  DHS MIC College of Technology</option>
+
+  <option value="595">EASA College of Engineering and Technology</option>
+
+  <option value="132">Easwari Engineering College</option>
+
+  <option value="133">EGS Pillay Engineering College</option>
+
+  <option value="134">Einstein College of Engineering</option>
+
+  <option value="135">ER  DCI Institute of Technology</option>
+
+  <option value="137">Erode Builder Educational Trust's Group of Institutions</option>
+
+  <option value="136">Er.Perumal Manimekalai College of Engineering</option>
+
+  <option value="138">Ethiraj College for Women</option>
+
+  <option value="583">Excel Business School</option>
+
+  <option value="582">Excel College for Commerce &amp; Science</option>
+
+  <option value="584">Excel College of Architecture &amp; Planning</option>
+
+  <option value="586">Excel College of Education</option>
+
+  <option value="581">Excel College of Engineering &amp; Technology</option>
+
+  <option value="580">Excel Engineering College</option>
+
+  <option value="587">Excel ITI</option>
+
+  <option value="585">Excel Polytechnic College</option>
+
+  <option value="139">FEAT Annamalai University</option>
+
+  <option value="140">Francis Xavier Engineering College</option>
+
+  <option value="146">Gandhigram Rural institute</option>
+
+  <option value="145">Gandhi Institute for Technogical Advancement</option>
+
+  <option value="147">Gayatari Vidya Parishad College Of Engineering</option>
+
+  <option value="148">GITAM Institute of Management</option>
+
+  <option value="149">GITAM Institute of Science</option>
+
+  <option value="150">GITAM Institute of Technology, Hyderabad</option>
+
+  <option value="151">GITAM Institute of Technology, Vizag</option>
+
+  <option value="152">GITAM School of Technology, Bengaluru</option>
+
+  <option value="143">G.K.M College of Engineering and Technology</option>
+
+  <option value="153">GKM College of Engineering and Technology</option>
+
+  <option value="154">Gnanamani College of Engineering</option>
+
+  <option value="142">G. Narayanamma Institute of Technology and Science</option>
+
+  <option value="155">Gokaraju Rangaraju Institute of Engineering and Technology</option>
+
+  <option value="156">Gossener College</option>
+
+  <option value="609">Government college of Engineering</option>
+
+  <option value="157">Government College of Engineering, Salem</option>
+
+  <option value="158">Government College of Engineering, Tirunelveli</option>
+
+  <option value="600">Government College of Fine Arts</option>
+
+  <option value="159">Government College of Technology, Coimbatore</option>
+
+  <option value="160">Government Engineering College, Thrissur</option>
+
+  <option value="161">Government Engineering College, Trivandrum</option>
+
+  <option value="162">Government Model Engineering College</option>
+
+  <option value="141">G Pullaiah College of Engineering and Technology</option>
+
+  <option value="144">G.Pulla Reddy Engineering College</option>
+
+  <option value="163">Great Lakes Institute of Management</option>
+
+  <option value="164">GRT Institute of Engineering and Technology</option>
+
+  <option value="606">GTN Arts College</option>
+
+  <option value="165">Gudlavalleru Engineering College</option>
+
+  <option value="166">Gurgaon Institute of Technology</option>
+
+  <option value="167">Guru Ghasidas Vishwavidyalaya</option>
+
+  <option value="168">Guru Nanak College</option>
+
+  <option value="169">Gyan Ganga College of Technology</option>
+
+  <option value="170">Gyan Vihar School of Engineering and Technology Jaipur</option>
+
+  <option value="171">Haldia Institute of Technology</option>
+
+  <option value="608">Hindustan College of Arts &amp; Science</option>
+
+  <option value="172">Hindustan College of Engineering</option>
+
+  <option value="603">Hindusthan Institute of Technology</option>
+
+  <option value="173">IET DAVVINDORE</option>
+
+  <option value="174">Image College of Arts, Animation and Technology</option>
+
+  <option value="175">Imperial College London</option>
+
+  <option value="177">Indian Institute of Information Technology, Allahabad</option>
+
+  <option value="178">Indian Institute of Information Technology, Bhubaneswar</option>
+
+  <option value="176">Indian Institute of Information Technology Design and Manufacture, Kancheepuram</option>
+
+  <option value="179">Indian Institute of Information Technology, Design and Manufacturing (IIITDM)</option>
+
+  <option value="180">Indian Institute of Information Technology, Hyderabad</option>
+
+  <option value="181">Indian Institute of Management Bangalore</option>
+
+  <option value="182">Indian Institute of Management Calcutta</option>
+
+  <option value="183">Indian Institute of Management Trichy</option>
+
+  <option value="184">Indian Institute of Science Bangalore</option>
+
+  <option value="185">Indian Institute of Science Education and Research, Kolkata</option>
+
+  <option value="186">Indian Institute of Science Education and Research, Pune</option>
+
+  <option value="187">Indian Institute of Science Education and Research, Thiruvananthapuram</option>
+
+  <option value="188">Indian Institute of Space Science and Technology</option>
+
+  <option value="189">Indian Institute of Technology Bombay</option>
+
+  <option value="190">Indian Institute of Technology Delhi</option>
+
+  <option value="191">Indian Institute of Technology Guwahati</option>
+
+  <option value="196">Indian Institute of Technology, Jodhpur</option>
+
+  <option value="192">Indian Institute of Technology Kanpur</option>
+
+  <option value="197">Indian Institute of Technology, Kharagpur</option>
+
+  <option value="193">Indian Institute of Technology Madras</option>
+
+  <option value="194">Indian Institute of Technology Roorkee</option>
+
+  <option value="195">Indian Institute of Technology ROPAR</option>
+
+  <option value="198">Indian Railways Institute of Mechanical and Electrical Engineering</option>
+
+  <option value="199">Indian School of Mines, Dhanbad</option>
+
+  <option value="200">Indira Gandhi Institute of Technology</option>
+
+  <option value="201">Indra Ganesan College of Engineering, </option>
+
+  <option value="202">Infant Jesus College of Engineering</option>
+
+  <option value="203">Info Institute of Engineering</option>
+
+  <option value="204">Institute of Chemical Technology</option>
+
+  <option value="205">Institute of Engineering and Management, Kolkata</option>
+
+  <option value="206">Institute of Engineering and Technology</option>
+
+  <option value="207">Institute Of Engineering and TechnologyDAVV</option>
+
+  <option value="208">Institute of Hotel Management Catering Technology and Applied Nutrition, Mumbai</option>
+
+  <option value="209">Institute of Management, Nirma University</option>
+
+  <option value="210">Institute of Road and Transport Technology</option>
+
+  <option value="211">Institute of Science and Technology</option>
+
+  <option value="212">Institute of Technology and Management</option>
+
+  <option value="213">Institute of Technology and Sciences(ITS), Bhiwani</option>
+
+  <option value="214">International Institute for Population Sciences</option>
+
+  <option value="215">International Institute of Information Technology, Bangalore</option>
+
+  <option value="216">International Institute of Information Technology, Hyderabad</option>
+
+  <option value="219">Jadavpur University</option>
+
+  <option value="604">Jansons School of Business</option>
+
+  <option value="220">Jawahar Engineering College</option>
+
+  <option value="221">Jawaharlal Nehru Technological University</option>
+
+  <option value="223">Jaya Engineering College</option>
+
+  <option value="224">Jayam College of Engineering and Technology</option>
+
+  <option value="225">Jayaram College of Engineering and Technology</option>
+
+  <option value="226">Jaypee Institute of Information Technology</option>
+
+  <option value="222">Jay Shri Ram Group of Institution</option>
+
+  <option value="218">J. B. Institute of Engineering and Technology</option>
+
+  <option value="227">Jeppiaar Engineering College</option>
+
+  <option value="217">J J College of Engineering and Technology</option>
+
+  <option value="228">JNTUA College of Engineering Pulivendula</option>
+
+  <option value="229">Jodhpur Institute of Engineering  Technology</option>
+
+  <option value="230">Johns Hopkins University</option>
+
+  <option value="231">JSS Academy Of Technical Education</option>
+
+  <option value="232">Jyothi Engineering College</option>
+
+  <option value="237">Kakatiya Institute of Technology and Science, Warangal</option>
+
+  <option value="238">Kakatiya University</option>
+
+  <option value="239">Kalaignar Karunanidhi Institute of Technology</option>
+
+  <option value="240">Kalasalingam Institute of Technology</option>
+
+  <option value="241">Kalasalingam University</option>
+
+  <option value="242">Kalinga Institute of Industrial Technology</option>
+
+  <option value="243">Kamaraj College of Engineering and Technology</option>
+
+  <option value="244">Kanchi Pallavan Engineering College</option>
+
+  <option value="607">Karpagam Academy of Higher Education</option>
+
+  <option value="246">Karpagam College of Engineering</option>
+
+  <option value="247">Karpagam University</option>
+
+  <option value="245">Karpaga Vinayaga College of Engineering and Technology</option>
+
+  <option value="248">Karunya University</option>
+
+  <option value="249">Kathir College of Engineering</option>
+
+  <option value="250">KCG College of Technology</option>
+
+  <option value="251">KGISL Institute Of Technology</option>
+
+  <option value="252">Kings College of Engineering</option>
+
+  <option value="253">KIT'S College of Engineering , Kolhapur</option>
+
+  <option value="254">KKR  KSR Institute of Technology and Sciences</option>
+
+  <option value="235">K.L.N College Of Engineering</option>
+
+  <option value="236">K.L.N College of Information Technology</option>
+
+  <option value="255">Knowledge Institute of Technology(KIOT)</option>
+
+  <option value="256">Kolkata Institute of Technology</option>
+
+  <option value="257">Koneru Lakshmaiah College of Engineering</option>
+
+  <option value="258">Kongu Engineering College</option>
+
+  <option value="598">Kongunadu Arts and Science College</option>
+
+  <option value="259">Kongunadu College of Engineering and Technology</option>
+
+  <option value="260">KPR Institute of Engineering and Technology</option>
+
+  <option value="233">K Ramakrishnan College of Technology</option>
+
+  <option value="234">K S Rangasamy College of Technology</option>
+
+  <option value="261">KS School of Engineering and Management</option>
+
+  <option value="576">Kumaraguru Institutions(KCT/B-School/KCLAS)</option>
+
+  <option value="262">Kuppam engineering College</option>
+
+  <option value="264">Laki Reddy Bali Reddy College of Engineering</option>
+
+  <option value="265">Lakshmi Narain College of Technology</option>
+
+  <option value="266">Latha Mathavan Engineering College</option>
+
+  <option value="263">L. J. Institute of Engineering and Technology</option>
+
+  <option value="267">Lovely Professional University</option>
+
+  <option value="617">Loyola College of Arts and Science</option>
+
+  <option value="269">Loyola-ICAM College of Engineering and Technology</option>
+
+  <option value="268">Loyola Institute of Business Administration</option>
+
+  <option value="279">Maamallan Institute of Technology</option>
+
+  <option value="280">Madha Institute of Engineering and Technology</option>
+
+  <option value="281">Madras Christian College</option>
+
+  <option value="282">Madras Institute of Technology</option>
+
+  <option value="283">Madras University</option>
+
+  <option value="284">Madurai Institute Of Engineering and Technology</option>
+
+  <option value="285">Magna College of Engineering</option>
+
+  <option value="286">Maharaja Agrasen Institute of Technology</option>
+
+  <option value="287">Maharaja Prithvi Engineering College</option>
+
+  <option value="288">Maharaja Sayajirao University of Baroda</option>
+
+  <option value="289">Maharshi Arvind Institute of Science and Management</option>
+
+  <option value="290">Mahatma Gandhi Institute of Technology</option>
+
+  <option value="291">Mahendra Engineering College</option>
+
+  <option value="292">Mahendra Institute of Technology</option>
+
+  <option value="293">Mailam Engineering College</option>
+
+  <option value="294">Malaviya National Institute of Technology, Jaipur</option>
+
+  <option value="295">Malla Reddy Engineering College</option>
+
+  <option value="271">M.A.M College of Engineering and Technology</option>
+
+  <option value="273">M.A.M. School of Architecture</option>
+
+  <option value="272">M.A.M School of Engineering</option>
+
+  <option value="296">Management Development Institute</option>
+
+  <option value="297">Manakula Vinayagar Institute of Technology</option>
+
+  <option value="298">Manav Rachna International University</option>
+
+  <option value="299">Mangalam College of Engineering</option>
+
+  <option value="300">Manipal Institute of Technology</option>
+
+  <option value="301">Mannar Thirumalai Naicker College</option>
+
+  <option value="302">Mar Athanasius College of Engineering</option>
+
+  <option value="303">Mar Baselios College of Engineering and Technology</option>
+
+  <option value="274">M.A.R College of Engineering and Technology</option>
+
+  <option value="304">Maturi Venkata Subba Rao Engineering College</option>
+
+  <option value="305">Maulana Azad National Institute of Technology, Bhopal</option>
+
+  <option value="306">Medi-Caps Institute of Technology and Management</option>
+
+  <option value="307">Meenakshi College Of Engineering</option>
+
+  <option value="308">Meenakshi Sundararajan Engineering College</option>
+
+  <option value="309">Mepco Schlenk Engineering College</option>
+
+  <option value="310">MES College of Engineering</option>
+
+  <option value="275">M.I.E.T  ENGINEERING COLLEGE</option>
+
+  <option value="311">MIT Campus, Anna University</option>
+
+  <option value="270">M. Kumarasamy College of Engineering</option>
+
+  <option value="312">MNIT Jaipur</option>
+
+  <option value="313">MNM Jain Engineering College</option>
+
+  <option value="314">Model Engineering College</option>
+
+  <option value="315">Modern Education Society's College of Engineering</option>
+
+  <option value="316">Mohamed Sathak Engineering College</option>
+
+  <option value="317">Mohandas College of Engineering and Technology</option>
+
+  <option value="318">Moogambigai College of Engineering</option>
+
+  <option value="276">M.O.P. Vaishnav College for Women</option>
+
+  <option value="319">Motilal Nehru National Institute of Technology, Allahabad</option>
+
+  <option value="277">M.S. Ramaiah Institute of Technology</option>
+
+  <option value="320">Muffakham Jah College of Engineering and Technology</option>
+
+  <option value="321">Mumbai University</option>
+
+  <option value="589">Muthayammal College of Engineering</option>
+
+  <option value="590">Muthayammal Engineering College</option>
+
+  <option value="322">Muzaffarpur Institute of Technology</option>
+
+  <option value="323">MVGR College of Engineering</option>
+
+  <option value="324">MVJ College of Engineering</option>
+
+  <option value="278">M.V.S.R Engineering College</option>
+
+  <option value="325">Nalanda Degree College</option>
+
+  <option value="326">Nandha Engineering College</option>
+
+  <option value="327">Narasu's Sarathy Institute of Technology</option>
+
+  <option value="328">National Engineering College</option>
+
+  <option value="329">National Institute of Engineering</option>
+
+  <option value="330">National Institute Of Science And Technology</option>
+
+  <option value="331">National Institute of Technology, Agartala</option>
+
+  <option value="332">National Institute of Technology, Arunachal Pradesh</option>
+
+  <option value="333">National Institute of Technology, Calicut</option>
+
+  <option value="334">National Institute of Technology, Delhi</option>
+
+  <option value="335">National Institute of Technology, Durgapur</option>
+
+  <option value="336">National Institute of Technology, Goa</option>
+
+  <option value="337">National Institute of Technology, Hamirpur</option>
+
+  <option value="338">National Institute of Technology, Jalandhar</option>
+
+  <option value="339">National Institute of Technology, Jamshedpur</option>
+
+  <option value="340">National Institute of Technology, Karnataka, Surathkal</option>
+
+  <option value="342">National Institute of Technology, Kurukshetra</option>
+
+  <option value="343">National Institute of Technology, Manipur</option>
+
+  <option value="355">National Institute of TechnologyMeghalaya</option>
+
+  <option value="344">National Institute of Technology, Mizoram</option>
+
+  <option value="345">National Institute of Technology, Nagaland</option>
+
+  <option value="346">National Institute of Technology, Patna</option>
+
+  <option value="347">National Institute of Technology, Puducherry</option>
+
+  <option value="348">National Institute of Technology, Raipur</option>
+
+  <option value="349">National Institute of Technology, Rourkela</option>
+
+  <option value="350">National Institute of Technology, Sikkim</option>
+
+  <option value="351">National Institute of Technology, Silchar</option>
+
+  <option value="352">National Institute of Technology, Srinagar</option>
+
+  <option value="341">National Institute of Technology, Tiruchirapalli</option>
+
+  <option value="353">National Institute of Technology, Uttarakhand</option>
+
+  <option value="354">National Institute of Technology, Warangal</option>
+
+  <option value="356">National Research University of Information TechnologiesMechanics and Optics (NRU ITMO)</option>
+
+  <option value="357">National University of Singapore (NUS)</option>
+
+  <option value="358">Nehru Institute of Engineering and Technology</option>
+
+  <option value="359">Netaji Subhas Institute of Technology (NSIT)</option>
+
+  <option value="360">Nirma University of Science  Technology</option>
+
+  <option value="361">Nitte Mahalinga Adyanthaya Memorial Institute of Technology (NMAMIT)</option>
+
+  <option value="362">Northern India Engineering College</option>
+
+  <option value="363">NPR College of Engineering  Technology (NPRCET)</option>
+
+  <option value="364">NRI INSTITUE OF TECHNOLOGY (NRIIT)</option>
+
+  <option value="365">Odaiyappa College of Engineering and Technology (OCET)</option>
+
+  <option value="366">Oriental Institute of Science and Technology (OIST)</option>
+
+  <option value="1">Others</option>
+
+  <option value="367">Oxford College of Engineering and Technology</option>
+
+  <option value="374">Paavai College of Engineering</option>
+
+  <option value="373">PA College of Engineering and Technology</option>
+
+  <option value="375">Padmasri Dr. B.V Raju Institute of Technology (BVRIT)</option>
+
+  <option value="376">Panimalar Engineering College</option>
+
+  <option value="377">Pannaikadu Veerammal Paramasivam College of Engineering and Technology (PVP College of Engineering  Technology)</option>
+
+  <option value="378">Parisutham Institute of Technology and Science(PITS)</option>
+
+  <option value="379">Park College of Engineering and Technology (PCET)</option>
+
+  <option value="380">Pathfinder Engineering College</option>
+
+  <option value="369">P.B. College Of Engineering (PBCE)</option>
+
+  <option value="381">PBR Visvodaya Institute of Technology and Science (PBR VITS)</option>
+
+  <option value="382">People's Education Society Institute of TechnologySouth Campus (PESIT)</option>
+
+  <option value="383">periyar maniammai university (PMU)</option>
+
+  <option value="384">PERUNTHALAIVAR KAMARAJAR INSTITUTE OF ENGINEERING AND TECHNOLOGY (PKIET)</option>
+
+  <option value="385">PET Engineering College</option>
+
+  <option value="370">P.M.R Engineering College</option>
+
+  <option value="386">Podhigai College of Engineering  Technology</option>
+
+  <option value="387">Pondicherry University</option>
+
+  <option value="388">Ponnaiyah Ramajayam College of Engineering  Technology (PRCET)</option>
+
+  <option value="389">Prasad v. Potluri Siddhartha Institute of Technology (PVP Siddhartha Institute of Technology)</option>
+
+  <option value="390">PRATHYUSHA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</option>
+
+  <option value="368">P. R. Engineering College (PREC)</option>
+
+  <option value="391">Prince Shri Venkateshwara Padmavathy Engineering College</option>
+
+  <option value="392">PRIST University</option>
+
+  <option value="393">PSG College of Arts and Science</option>
+
+  <option value="371">P.S.G COLLEGE OF TECHNOLOGY</option>
+
+  <option value="602">PSG Institute of Medical Sciences and Research</option>
+
+  <option value="596">PSG institute of Technology and Applied Research(PSG iTech)</option>
+
+  <option value="394">PSG POLYTECHNIC COLLEGE</option>
+
+  <option value="611">PSGR Krishnammal College for Women</option>
+
+  <option value="395">PSNA College of Engineering and Technology (PSNA CET)</option>
+
+  <option value="372">P.S.R.ENGINEERING COLLEGE</option>
+
+  <option value="396">Pune Institute of Computer Technology (PICT)</option>
+
+  <option value="397">Pune Vidhyarthi Grihas College of Engineering and Technology (PVGCOET)</option>
+
+  <option value="402">Raja College of Engineering and Technology (RajaCET)</option>
+
+  <option value="403">Rajagiri College Of Social Sciences</option>
+
+  <option value="404">Rajagiri School of Engineering and Technology</option>
+
+  <option value="405">Rajalakshmi Engineering College</option>
+
+  <option value="406">Rajalakshmi Institute of Technology</option>
+
+  <option value="407">Rajiv Gandhi College of Engineering and Technology (RGCET)</option>
+
+  <option value="610">Ramakrishna College of arts and science for women</option>
+
+  <option value="409">Ramakrishna Mission Vivekananda College</option>
+
+  <option value="408">Rama Nagappa Shetty(RNS) Institute of Technology and Management Studies</option>
+
+  <option value="410">Ranganathan Engineering College</option>
+
+  <option value="411">Ranipettai Engineering College</option>
+
+  <option value="412">Rashtreeya Vidyalaya College of Engineering (RV College of Engineering)</option>
+
+  <option value="413">RMD Engineering College</option>
+
+  <option value="401">R.M.K. College of Engineering  Technology(RMKCET)</option>
+
+  <option value="400">R.M.K Engineering College</option>
+
+  <option value="399">R. N. Modi Engineering College (RMEC)</option>
+
+  <option value="414">Roever College of Engineering  Technology (Roever Tech)</option>
+
+  <option value="415">Royal College of Engineering  Technology (RCET)</option>
+
+  <option value="416">RRASE COLLEGE OF ENGINEERING</option>
+
+  <option value="417">RSR Engineering College</option>
+
+  <option value="418">Rungta College of Engineering  Technology (RCET)</option>
+
+  <option value="398">R V R  J C College of Engineering (Rayapati Venkata Rangarao  Jagarlamudi Chandramouli)</option>
+
+  <option value="419">RVS College of Engineering and Technology</option>
+
+  <option value="421">Saarland University</option>
+
+  <option value="422">SACS MAVMM Engineering College</option>
+
+  <option value="420">S.A. Engineering College</option>
+
+  <option value="423">Sanjay Ghodawat Group of Institute</option>
+
+  <option value="424">Sant Longowal Institute of Engineering and Technology (SLIET)</option>
+
+  <option value="425">Saranathan College of Engineering</option>
+
+  <option value="426">Sardar Raja College of Engineering (SRCE)</option>
+
+  <option value="427">Sardar Vallabhbhai National Institute of Technology (SVNIT)</option>
+
+  <option value="428">Sasi Institute of Technology  Engineering</option>
+
+  <option value="429">SASTRA University(Shanmugha Arts, Science, Technology  Research Academy)</option>
+
+  <option value="430">Sasurie College of Engineering</option>
+
+  <option value="431">Sathyabama University/Sathyabama Institute of Science and Technology</option>
+
+  <option value="432">Saveetha Engineering College</option>
+
+  <option value="433">Saveetha University</option>
+
+  <option value="434">SBM College of Engineering and Technology (SBMCET)</option>
+
+  <option value="435">School of Computer Science  Information Technology. Devi Ahilya Vishwavidyalaya</option>
+
+  <option value="436">School of EngineeringCochin University of Science and Technology (CUSAT)</option>
+
+  <option value="437">Seethalakshmi Ramaswami College</option>
+
+  <option value="438">Selvam College of Technology</option>
+
+  <option value="440">Sengunthar Engineering College, Erode</option>
+
+  <option value="439">Sengunthar Engineering College, Tiruchengode, Namakkal</option>
+
+  <option value="441">Seth Jai Parkash Mukand Lal Institute of Engineering and Technology</option>
+
+  <option value="442">Sethu Institute Of Technology</option>
+
+  <option value="443">shanmuganathan engineering College</option>
+
+  <option value="444">Shivani College of Engineering  Technology (SCET)</option>
+
+  <option value="445">Shree Motilal Kanhaiyalal Fomra Institute of Technology</option>
+
+  <option value="446">Shreenivasa Engineering College (SEC)</option>
+
+  <option value="447">Shri Angalamman College of Engineering and Technology (SACET)</option>
+
+  <option value="448">Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM)</option>
+
+  <option value="449">SHRI SAPTHAGIRI INSTITUTE OF TECHNOLOGY (SSIT)</option>
+
+  <option value="450">Sikkim Manipal University SMU</option>
+
+  <option value="451">SKP Engineering College (SKPEC)</option>
+
+  <option value="452">SKP Institute of Technology SKPIT</option>
+
+  <option value="453">SKR Engineering College SKREC</option>
+
+  <option value="454">SMK Fomra Institute of Technology</option>
+
+  <option value="613">SNS College of Engineering</option>
+
+  <option value="455">SNS COLLEGE OF TECHNOLOGY</option>
+
+  <option value="615">Sona College of Arts and Science</option>
+
+  <option value="456">SONA COLLEGE OF TECHNOLOGY.</option>
+
+  <option value="457">SREE BUDDHA COLLEGE OF ENGINEERING</option>
+
+  <option value="458">Sree Chitra Thirunal College of Engineering SCTCE</option>
+
+  <option value="463">Sreenidhi Institute of Science and Technology</option>
+
+  <option value="459">SREE SAKTHI ENGINEERING COLLEGE</option>
+
+  <option value="460">Sree Sastha Institute of Engineering and Technology (SSIET)</option>
+
+  <option value="461">Sree sowdambika College of engineering</option>
+
+  <option value="462">Sree Vidyanikethan Engineering College</option>
+
+  <option value="464">Sreyas Institute of Engineering  Technology</option>
+
+  <option value="465">Sri Bhagawan Mahaveer Jain College</option>
+
+  <option value="466">Sri Chaitanya Degree College</option>
+
+  <option value="467">Sri Chandrasekarendra Saraswathi Viswa Maha Vidyalaya (SCSVMV)</option>
+
+  <option value="483">Sridevi Womens Engineering College</option>
+
+  <option value="468">Sri Eshwar College of Engineering</option>
+
+  <option value="469">Sri Ganesh College Of Engineering and Technology ( SGCET )</option>
+
+  <option value="470">SRI JAYACHAMARAJENDRA COLLEGE OF ENGINEERING (SJCE)</option>
+
+  <option value="593">Sri Krishna arts and Science College</option>
+
+  <option value="471">Sri Krishna College of Engineering  Technology (SKCET)</option>
+
+  <option value="588">Sri Krishna College of Technology</option>
+
+  <option value="472">Sri Manakula Vinayagar Engineering College</option>
+
+  <option value="473">Sri Muthukumaran Institute Of Technology SMIT</option>
+
+  <option value="474">Sri Nandhanam College of Engineering Technology</option>
+
+  <option value="484">Srinivasa Institute of Engineering and Technology</option>
+
+  <option value="485">Srinivasan Engineering College</option>
+
+  <option value="475">Sri Padmavati Mahila Visvavidyalayam (SPMVV)</option>
+
+  <option value="614">Sri Ramakrishna College of Arts and Science for Women</option>
+
+  <option value="477">Sri Ramakrishna Engineering College</option>
+
+  <option value="577">Sri Ramakrishna institute of Technology</option>
+
+  <option value="486">Sriram Engineering College</option>
+
+  <option value="476">Sri Ram Engineering College</option>
+
+  <option value="478">Sri Sai Ram Engineering College</option>
+
+  <option value="479">Sri Shakthi Institute of Engineering and Technology</option>
+
+  <option value="480">Sri Sivasubramaniya Nadar College (SSN) of Engineering</option>
+
+  <option value="481">Sri Venkateswara College of Engineering (SVCE)</option>
+
+  <option value="482">Sri Venkateswara University</option>
+
+  <option value="487">SRM University</option>
+
+  <option value="488">SSR Engineering College</option>
+
+  <option value="495">Stanford University</option>
+
+  <option value="496">Star Lion College of Engineering and Technology</option>
+
+  <option value="489">St. Berchmans(SB) College</option>
+
+  <option value="605">St. Joseph's College</option>
+
+  <option value="612">St.Joseph's College of Engineering</option>
+
+  <option value="490">St. Joseph's College of Engineering and Technology</option>
+
+  <option value="491">St. Joseph's Institute of Technology</option>
+
+  <option value="492">St. Mary's Engineering College</option>
+
+  <option value="493">St. Peter's College of Engineering and Technology</option>
+
+  <option value="494">St. Xavier's College</option>
+
+  <option value="497">Sudharsan Engineering College</option>
+
+  <option value="498">Supreme Knowledge Foundation Group of Institution</option>
+
+  <option value="499">SV National Institute of Technology, Surat</option>
+
+  <option value="500">SVU College of Engineering, Sri Venkateswara University</option>
+
+  <option value="501">Swarnandhra College of Engineering and Technology</option>
+
+  <option value="502">Symbiosis Institute of International Business</option>
+
+  <option value="505">Tagore Engineering College</option>
+
+  <option value="506">Tamilnadu Engineering College</option>
+
+  <option value="507">Tbilisi State University</option>
+
+  <option value="508">Techno India College of Technology</option>
+
+  <option value="509">Tejaa Shakthi Institute of Technology for Women</option>
+
+  <option value="510">Texas AM University, Qatar</option>
+
+  <option value="511">Thadomal Shahani Engineering College</option>
+
+  <option value="512">Thangal Kunju Musaliar College of Engineering, Kollam</option>
+
+  <option value="513">Thanthai Periyar Government College Of Technology</option>
+
+  <option value="514">Thapar University</option>
+
+  <option value="616">THE TIPSGLOBAL INSTITUTE</option>
+
+  <option value="515">The University of Chicago</option>
+
+  <option value="516">The University of Texas at Dallas</option>
+
+  <option value="517">Thiyagarajar College of Engineering</option>
+
+  <option value="518">Thiyagarajar School of Management</option>
+
+  <option value="503">T J Institute of Technology</option>
+
+  <option value="504">T.K.M College of Engineering</option>
+
+  <option value="519">Toc H Institute of Science And Technology</option>
+
+  <option value="520">Trichy Engineering College</option>
+
+  <option value="521">Triumphant Institute of Management Education</option>
+
+  <option value="522">TRP Engineering College</option>
+
+  <option value="523">Ultra College of Engineering and Technology for Women</option>
+
+  <option value="524">United Institute of Technology</option>
+
+  <option value="525">University at Buffalo</option>
+
+  <option value="526">University College of Engineering Panruti</option>
+
+  <option value="529">University College of Engineering, Pattukkottai</option>
+
+  <option value="527">University College of Engineering Tindivanam</option>
+
+  <option value="528">University College of Engineering Villupuram</option>
+
+  <option value="530">University Institute of Engineering and Technology, Panjab University</option>
+
+  <option value="531">University of California, Santa Barbara</option>
+
+  <option value="532">University of Cape Town</option>
+
+  <option value="533">University of Chicago</option>
+
+  <option value="534">University of Houston</option>
+
+  <option value="535">University of Kalyani</option>
+
+  <option value="536">University of Pittsburgh</option>
+
+  <option value="537">University of Pune</option>
+
+  <option value="538">University of Rajasthan</option>
+
+  <option value="539">Unnamalai Institute of Technology</option>
+
+  <option value="540">Urumu Dhanalakshmi College</option>
+
+  <option value="541">Usha Rama College of Engineering and Technology</option>
+
+  <option value="544">Valliammai Engineering College</option>
+
+  <option value="545">Vandayar Engineering College</option>
+
+  <option value="546">Vardhaman College of Engineering</option>
+
+  <option value="547">Varuvan Vadivelan Institute of Technology</option>
+
+  <option value="548">Vasireddy Venktadri Institute of Technology</option>
+
+  <option value="549">Veerammal Engineering College</option>
+
+  <option value="550">Veermata Jijabai Technological Institute</option>
+
+  <option value="552">Velagapudi Ramakrishna Siddhartha Engineering College</option>
+
+  <option value="553">Velalar College of Engineering and Technology</option>
+
+  <option value="554">Vellamal College of Engineering and Technology</option>
+
+  <option value="555">Vellamal Engineering College</option>
+
+  <option value="556">Vellamal Institute of Technology</option>
+
+  <option value="557">Vels University</option>
+
+  <option value="551">Vel Tech High Tech, Dr.Rangarajan Dr.Sakunthala Engineering College</option>
+
+  <option value="558">Veltech University</option>
+
+  <option value="559">Vidhya Jyothi Institute of Technology</option>
+
+  <option value="560">Vidyaa Vikas College of Engineering and Technology</option>
+
+  <option value="561">Vignan's Lara Institute of Technology and Sciences</option>
+
+  <option value="562">Vinayaka Mission's Kirupananda Variyar Engineering College</option>
+
+  <option value="563">Visvesvarya National Institute of Technology, Nagpur</option>
+
+  <option value="566">VITS College of Engineering</option>
+
+  <option value="564">VIT University, Chennai</option>
+
+  <option value="565">VIT University, Vellore</option>
+
+  <option value="567">Vivekananda Institute of Technology</option>
+
+  <option value="568">Vivekanandha College of Engineering for Women</option>
+
+  <option value="569">VKS College of Engineering and Technology</option>
+
+  <option value="570">VRS College of Engineering and Technology</option>
+
+  <option value="542">V.R. Siddhartha Engineering College</option>
+
+  <option value="543">V.S.B Engineering College, Karur</option>
+
+  <option value="571">VSB Enginnering College</option>
+
+  <option value="572">Vyas Institutes of Higher Education, Jodhpur</option>
+
+  <option value="573">Xavier Labour Relations Institute</option>
+
+  <option value="574">Zagreb Faculty of Electrical Engineering and Computing</option>
+
+  <option value="575">Zhejiang University</option>
+
+</select>
 	<b>Select Events</b>
 <div class="wrapper">
 <div class="w3-bar w3-black">
-  <button class="a1" onclick="openCity('cat1')">Category 1</button>
-  <button class="a1" onclick="openCity('cat2')">Category 2</button>
-  <button class="a1" onclick="openCity('cat3')">Category 3</button>
+  <input type="button" class="a1" onclick="openCity('cat1')" value="Category 1" placeholder="Category 1">
+  <input type="button" class="a1" onclick="openCity('cat2')" value="Category 2" placeholder="Category 2">
+  <input type="button" class="a1" onclick="openCity('cat3')" value="Category 3" placeholder="Category 3">
 </div>
 
 <div id="cat1" class="w3-container cat">
 
 <div class="bxes">
-<div class="top" stylebackground-image:url(static/img/speaker1.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>POSTER DESIGN &nbsp 
-</b><input type="checkbox" class="cb" name="POSTER DESIGN"></div>
+<div class="top" style="background-image:url(static/img/speaker1.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+<div class="bottom"><b>POSTER DESIGN &nbsp </b><input type="checkbox" class="cb" value="POSTER DESIGN"></div>
 </div>
-
 <div class="bxes">
-
 <div class="top" style="background-image:url(static/img/speaker2.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>MEME CREATION &nbsp </b>
-  <input type="checkbox" class="cb" name="MEME CREATION"></div>
+<div class="bottom"><b>MEME CREATION &nbsp </b><input type="checkbox" class="cb" value="MEME CREATION"></div>
 </div>
-
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker3.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>Third Eye &nbsp </b><input type="checkbox" class="cb" name="THIRD EYE"></div></div>
-
+<div class="bottom"><b>Third Eye &nbsp </b><input type="checkbox" class="cb" value="THIRD EYE"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>INK IT &nbsp </b><input type="checkbox" class="cb" name="INK IT"></div></div>
+<div class="bottom"><b>INK IT &nbsp </b><input type="checkbox" class="cb" value="INK IT"></div></div>
 
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>NAALAIYA BHARATHI &nbsp </b><input type="checkbox" class="cb" name="NAALAIYA BHARATHI"></div></div>
-
+<div class="bottom"><b>NAALAIYA BHARATHI &nbsp </b><input type="checkbox" class="cb" value="NAALAIYA BHARATHI"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>PEN A POEM &nbsp </b><input type="checkbox" class="cb" name="PEN A POEM"></div></div>
-
+<div class="bottom"><b>PEN A POEM &nbsp </b><input type="checkbox" class="cb" value="PEN A POEM"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" name="DIRECTOR CHAIR"></div></div>
-
+<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b><input type="checkbox" class="cb" value="DIRECTOR'S CHAIR"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/jstamin.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>JUST A MINUTE &nbsp </b><input type="checkbox" class="cb" name="JUST A MINUTE"></div></div>
+<div class="bottom"><b>JUST A MINUTE &nbsp </b><input type="checkbox" class="cb" value="JUST A MINUTE"></div></div>
 
 </div>
 
 <div id="cat2" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/scribble.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>SCRIBBLES &nbsp </b><input type="checkbox" class="cb" name="SCRIBBLES"></div></div>
+<div class="bottom"><b>SCRIBBLES &nbsp </b><input type="checkbox" class="cb" value="SCRIBBLES"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/painting.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>BRUSH HOUR &nbsp </b><input type="checkbox" class="cb" name="BRUSH HOUR"></div></div>
+<div class="bottom"><b>BRUSH HOUR &nbsp </b><input type="checkbox" class="cb" value="BRUSH HOUR"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>HENNA ART &nbsp </b><input type="checkbox" class="cb" name="HENNA ART"></div></div>
+<div class="bottom"><b>HENNA ART &nbsp </b><input type="checkbox" class="cb" value="HENNA ART"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/debate.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+<div class="bottom"><b>WAR OF WORDS &nbsp </b><input type="checkbox" class="cb" value="WAR OF WORDS"></div></div>
 
-<div class="bottom"><b>WAR OF WORDS &nbsp </b><input type="checkbox" class="cb" name="WAR OF WORDS"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/dance.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>GROOVE & GLAM &nbsp </b><input type="checkbox" class="cb" name="GROOVE & GLAM"></div></div>
+<div class="bottom"><b>GROOVE & GLAM &nbsp </b><input type="checkbox" class="cb" value="GROOVE & GLAM"><br>Select Team Size <select id="teamsize "name="teamsize">
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/solodance.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>SHAKE IT UP &nbsp </b><input type="checkbox" class="cb" name="SHAKE IT UP"></div></div>
+<div class="bottom"><b>SHAKE IT UP &nbsp </b><input type="checkbox" class="cb" value="SHAKE IT UP"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/singing.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>RAGA &nbsp </b><input type="checkbox" class="cb" name="RAGA"></div></div>
+<div class="bottom"><b>RAGA &nbsp </b><input type="checkbox" class="cb" value="RAGA"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
+<div class="bottom"><b>LISTEN TO MY BEAT &nbsp </b><input type="checkbox" class="cb" value="LISTEN TO MY BEAT"></div></div>
 
-<div class="bottom"><b>LISTEN TO MY BEAT &nbsp </b><input type="checkbox" class="cb" name="LISTEN TO MY BEAT"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/singing.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>ANNIYAN &nbsp </b><input type="checkbox" class="cb" name="ANNIYAN"></div></div>
+<div class="bottom"><b>ANNIYAN &nbsp </b><input type="checkbox" class="cb" value="ANNIYAN"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-
-<div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b><input type="checkbox" class="cb" name="THE UNDERRATED TROUPER"></div></div>
-
+<div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b><input type="checkbox" class="cb" value="THE UNDERRATED TROUPER"></div></div>
 <div class="bxes1"></div>
 <div class="bxes1"></div>
 </div>
 
 <div id="cat3" class="w3-container cat" style="display:none">
 <div class="bxes"><div class="top" style="background-image:url(static/img/pubg.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1">
-<b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" name="PUBG"><br>
-<b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" name="Free Fire"></div></span></div>
-
+<div class="bottom" style="text-align:left;"><span id="t1"><b>PUBG MOBILE</b> &nbsp <input type="checkbox" class="cb" value="PUBG">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="solo">Solo</label><input type="radio" id="solo" name="solo" value="solo"><br><b>FREE FIRE MOBILE</b><input type="checkbox" class="cb" value="Free Fire">&nbsp&nbsp&nbsp<label for="squad">Squad</label><input type="radio" id="squad" name="squad" value="squad"></div></span></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/nfs.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><span id="t1">
-<b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" name="COD"><br>
-<b>NFS MOST WANTED</b><input type="checkbox" class="cb" name="NFS MW"></div></span></div>
-
+<div class="bottom" style="text-align:left;"><span id="t1"><b>CALL OF DUTY PC</b> &nbsp <input type="checkbox" class="cb" value="COD">&nbsp&nbsp&nbsp<label for="solopc">Solo</label><input type="radio" id="solopc" name="solopc" value="solopc"><br><b>NFS MostWanted</b><input type="checkbox" class="cb" value="NFS MW">&nbsp&nbsp&nbsp&nbsp&nbsp<label for="squadpc">Squad</label><input type="radio" id="squadpc" name="squadpc" value="squadpc"></div></span></div>
 <div class="bxes1"></div>
 <div class="bxes1"></div>
 </div>
@@ -313,6 +1545,30 @@ a {
     </p>
     <a href="index">Go Home</a>
     {% endif %}
+	
+	
+<script>
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+}
+</script>
+<script>
+function openCity(catName) {
+  var i;
+  var x = document.getElementsByClassName("cat");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(catName).style.display = "block";  
+}
+</script>
 
 </body>
 </html>

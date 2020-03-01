@@ -33,48 +33,80 @@ def register_view(request):
             total_cost += 100
         if request.POST.get('MEME CREATION') == 'on':
             events += "Meme Creation, "
+            total_cost += 100 
         if request.POST.get('THIRD EYE') == 'on':
             events += "Third Eye, "
+            total_cost += 100
         if request.POST.get('INK IT') == 'on':
             events += "Ink It, "
+            total_cost += 100
         if request.POST.get('NAALAIYA BHARATHI') == 'on':
             events += "Naalaiya Bharathi, "
+            total_cost += 100
         if request.POST.get('PEN A POEM') == 'on':
             events += "Pen A Poem, "
+            total_cost += 100
         if request.POST.get('DIRECTOR CHAIR') == 'on':
             events += "Director's Chair, "
+            total_cost += 300
         if request.POST.get('JUST A MINUTE') == 'on':
             events += "Just A Minute, "
-        if request.POST.get('THIRD EYE') == 'on':
-            events += "Third Eye, "
+            total_cost += 100
+        # if request.POST.get('THIRD EYE') == 'on':
+        #     events += "Third Eye, "
         if request.POST.get('SCRIBBLES') == 'on':
             events += "Scribbles, "
+            total_cost += 100
         if request.POST.get('BRUSH HOUR') == 'on':
             events += "Brush Hour, "
+            total_cost += 100
         if request.POST.get('HENNA ART') == 'on':
             events += "Henna Art, "
+            total_cost += 150
         if request.POST.get('WAR OF WORDS') == 'on':
             events += "War of Words, "
+            total_cost += 100
         if request.POST.get('GROOVE & GLAM') == 'on':
             events += "Groove and Glam, "
+            team size = 2 or 12
+            total_cost += teamsize * 50
+
         if request.POST.get('SHAKE IT UP') == 'on':
             events += "Shake It Up, "
+            total_cost += 100
         if request.POST.get('RAGA') == 'on':
             events += "Raga, "
+            total_cost += 100
         if request.POST.get('LISTEN TO MY BEAT') == 'on':
             events += "Listen To My Beat, "
+            total_cost += 100
         if request.POST.get('ANNIYAN') == 'on':
             events += "Anniyan, "
+            total_cost += 100
         if request.POST.get('THE UNDERRATED TROUPER') == 'on':
             events += "The Underrated Trouper, "
+            total_cost += 100
         if request.POST.get('PUBG') == 'on':
             events += "Pubg, "
-        if request.POST.get('NFS MW') == 'on':
-            events += "NFS Most Wanted, "
-        if request.POST.get('COD') == 'on':
-            events += "COD, "
+            if 'solo':
+                total_cost += 50
+            if 'squad':
+                total_cost += 200
         if request.POST.get('Free Fire') == 'on':
             events += "Free Fire, "
+            if 'solo':
+                total_cost += 50
+            if 'squad':
+                total_cost += 200
+
+        if request.POST.get('NFS MW') == 'on':
+            events += "NFS Most Wanted, "
+            total_cost += 100
+        if request.POST.get('COD') == 'on':
+            events += "COD, "
+            total_cost += 100
+        
+
         if (len(events) < 3):
             return render(request,'register.html',{'EVENTSELECT':'No'})
         print(events)
