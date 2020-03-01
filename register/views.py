@@ -24,8 +24,13 @@ def register_view(request):
         else:
             print("Existing")
             return render(request,'register.html',{'submit':'EXISTINGID'})
+
         student_name = request.POST.get('name')
         college_name = request.POST.get('college')
+        
+        print(college_name)
+
+
         events = ""
         total_cost = 0
         if request.POST.get('POSTER DESIGN') == 'on':
@@ -52,8 +57,6 @@ def register_view(request):
         if request.POST.get('JUST A MINUTE') == 'on':
             events += "Just A Minute, "
             total_cost += 100
-        # if request.POST.get('THIRD EYE') == 'on':
-        #     events += "Third Eye, "
         if request.POST.get('SCRIBBLES') == 'on':
             events += "Scribbles, "
             total_cost += 100
@@ -68,9 +71,8 @@ def register_view(request):
             total_cost += 100
         if request.POST.get('GROOVE & GLAM') == 'on':
             events += "Groove and Glam, "
-            team size = 2 or 12
-            total_cost += teamsize * 50
-
+            gndgteam_size = int(request.POST.get('gndgteamsize'))
+            total_cost += gndgteamsize * 50
         if request.POST.get('SHAKE IT UP') == 'on':
             events += "Shake It Up, "
             total_cost += 100
@@ -88,16 +90,16 @@ def register_view(request):
             total_cost += 100
         if request.POST.get('PUBG') == 'on':
             events += "Pubg, "
-            if 'solo':
-                total_cost += 50
-            if 'squad':
-                total_cost += 200
+            # if 'solo':
+            #     total_cost += 50
+            # if 'squad':
+            #     total_cost += 200
         if request.POST.get('Free Fire') == 'on':
             events += "Free Fire, "
-            if 'solo':
-                total_cost += 50
-            if 'squad':
-                total_cost += 200
+            # if 'solo':
+            #     total_cost += 50
+            # if 'squad':
+            #     total_cost += 200
 
         if request.POST.get('NFS MW') == 'on':
             events += "NFS Most Wanted, "
@@ -109,6 +111,7 @@ def register_view(request):
 
         if (len(events) < 3):
             return render(request,'register.html',{'EVENTSELECT':'No'})
+        
         print(events)
 
         Registrations.objects.create(student_name=student_name,email_id=email_id,college_name=college_name,reg_id=random.randint(20000,20000),events=events)
@@ -123,6 +126,7 @@ def register_view(request):
         #     return(render(request,'register.html',{'submit':'NO'}))
         # except:
         #     return(render(request,'register.html',{'submit':'NO'}))
+
 def view_registrations(request):
     registrations = Registrations.objects.all()
     return render(request,'viewreg.html',{'registrations':registrations})
