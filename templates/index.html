@@ -59,6 +59,42 @@
         }
 
     </style>
+
+
+    <script>
+// Set the date we're counting down to
+    var countDownDate = new Date("Mar 5, 2020 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+
 </head>
 
 <body>
@@ -89,7 +125,7 @@
                     <li><a data-toggle="elementscroll" href="#info">About</a></li>
                     <li><a data-toggle="elementscroll" href="#program">Program</a></li>
                     <li><a data-toggle="elementscroll" href="#venue">Venue</a></li>
-                    <li><a data-toggle="elementscroll" href="#register">Register</a></li>
+                    <li><a data-toggle="elementscroll" href="register">Register</a></li>
                 </ul>
             </div>
 
@@ -113,9 +149,13 @@
                     <br>
                     <img src="">
                     <strong>
+                        <b style="font-size:30px;">Until Saaral on March 5th</b><br><br>
+						<p id="countdown" style="font-size:30px;"></p><br>
                         <h1 class="uppercase about">ABOUT SAARAL</h1>
-                    </strong><br><br>
-                    <p class="lead">The Inter-College fest organizing by the students of KiTE. A great platform for students to establish their skills and to find new talents. By crowning all those activities SARAL'20, will be there as a trademark of KiTE.
+                    </strong>
+                    <br>
+                    <p class="lead">The Inter-College fest organizing by the students of KiTE. A great platform for students to establish their skills and to find new talents. By crowning all those activities SAARAL'20, will be there as a trademark of KiTE.
+                        <br><br> On March 5th and 6th of 2020
                         <br><br><b>Win prizes upto 1Lakh</b>
                     </p>
                 </div>
@@ -501,13 +541,13 @@
                             <h4 class="uppercase">Contact Us:</h4>
                             <p><ul style="list-style: none;padding: 0;margin: 0;">
                                 <li>Name : Dinesh Kumar</li>
-                                <li>Ph : 8778593843</li>
+                                <li>Ph : +91 8778593843</li>
                                 <li>Name : S.Saadhana</li>
-                                <li>Ph : 95978034554</li>
+                                <li>Ph : +91 9578034554</li>
                                 <li>Name : K.J Abhi Kanishka</li>
-                                <li>Ph : 8940605490</li>
+                                <li>Ph : +91 8940605490</li>
                                 <li>Name : H.Abhishek</li>
-                                <li>Ph : 7395880886</li>
+                                <li>Ph : +91 7395880886</li>
                             </ul>
                             </p>
                         </div>

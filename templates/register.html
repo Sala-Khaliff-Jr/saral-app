@@ -9,9 +9,9 @@ margin:0px auto;
 padding:0px auto;
 }
 .wrapper{
-width:100%;
-height:fit-content;
-background-color:white #f1f1f1;
+    width:100%;
+    height:fit-content;
+    background-color:white #f1f1f1;
 }
 #contactid{
   list-style: none;
@@ -64,19 +64,21 @@ margin-top:25px;
 }
 
 #phonepay{
-height:250px;
-width:220px;
-background-image:url(static/img/phonepe.png);
+height:200px;
+width:170px;
+background-image:url(static/img/phonepay.png);
 background-size:100% 100%;
 background-repeat:no-repeat;
+background-color:transparent;
 }
 
 #googlepay{
-height:250px;
-width:220px;
+height:200px;
+width:170px;
 background-image:url(static/img/gpay.png);
 background-size:100% 100%;
 background-repeat:no-repeat;
+background-color:transparent;
 }
 
 .top{
@@ -246,6 +248,7 @@ a{
   color: dodgerblue;
 }
 </style>
+
 </head>
 <body>
 {% if submit == 'NO' %}
@@ -1533,7 +1536,7 @@ a{
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>PEN A POEM &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="PEN A POEM"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b> <br> Rs 300 <input type="checkbox" class="cb" name="DIRECTOR'S CHAIR"></div></div>
+<div class="bottom"><b>DIRECTOR'S CHAIR &nbsp </b> <br> Rs 500 <input type="checkbox" class="cb" name="DIRECTOR'S CHAIR"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/jstamin.png);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>JUST A MINUTE &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="JUST A MINUTE"></div></div>
 
@@ -1547,7 +1550,7 @@ a{
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker4.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>HENNA ART &nbsp </b> <br> Rs 150 <input type="checkbox" class="cb" name="HENNA ART"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/debate.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
-<div class="bottom"><b>WAR OF WORDS &nbsp </b><input type="checkbox" class="cb" name="WAR OF WORDS"></div></div>
+<div class="bottom"><b>WAR OF WORDS &nbsp </b><br> Rs 100<input type="checkbox" class="cb" name="WAR OF WORDS"></div></div>
 
 <div class="bxes"><div class="top" style="background-image:url(static/img/anniyan.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>ANNIYAN &nbsp </b>  <br> Rs 100  <input type="checkbox" class="cb" name="ANNIYAN"></div></div>
@@ -1579,7 +1582,6 @@ Select Team Size
 <div class="bottom"><b>ANNIYAN &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="ANNIYAN"></div></div>
 <div class="bxes"><div class="top" style="background-image:url(static/img/speaker5.jpg);background-size:100% 100%;background-repeat:no-repeat;"></div>
 <div class="bottom"><b>THE UNDERRATED TROUPER &nbsp </b> <br> Rs 100 <input type="checkbox" class="cb" name="THE UNDERRATED TROUPER"></div></div>
-
 
 </div>
 
@@ -1619,31 +1621,37 @@ Select Team Size
     <div class="box"><p>**Terms and Conditions Applied</p>
     <p>Click register to confirm your registration</p></div>
 
-    <!--<div class="bbox"><p>Terms and Conditions Applied</p>-->
-    <!--<p>Click register to confirm your registration</p></div>-->
-	
     <button type="submit" class="registerbtn" value="OK" >Register</button>
     <!-- onsubmit="return ValidateEmail(document.registerform.email)"  -->
   </div>
 
-</form>
     {% elif submit == 'ALREADY' %}
+
+
       <centre>
       <p>You have already Registered {{student_name}}<br></p>
+      </centre>
+
+
+
         {% else %}
         <centre>
         <p>You have succesfully regsitered</p><hr>
+<div class="vot" style="color:white;background-color:black;background-image:url(static/img/wp.jpg);background-size:cover;background-repeat:no-repeat;text-align:center;">
         <br>Thanks For Registering {{ student_name }}
         <p>
 
-    Your Registration ID is {{id}}, <br> The total Amount to be paid is Rs {{total_cost }}/- Only<br><br> For Query Contact
-	<div id="googlepay"></div>
-	Some text
-	<div id="phonepay"></div>
-	some text<br>
-
-    <ul id="contactid">
-      <li><b style="font-family:'montserratbold';color: #262626;font-size: 32px;">Contact Us</b></li><br>
+      Your Registration ID is {{id}}, <br> The total Amount to be paid is Rs {{total_cost }}/- Only<br><br>
+      If you are willing to pay online through Phonepe or GPay<br>
+      Pay the total amount mentioned fully above with the message of Your Registration ID to the given contact and share the screenshot to H.Abhishek at +91 7395880886
+      <br>
+      PhonePe : Abhishek Haridass +91 7395880886
+      GPay : Agent Gamer +91 7395880886
+      <div id="googlepay" style="margin-left:45%;"></div>
+      <div id="phonepay" style="margin-left:45%;"></div>
+	For Any Queries
+    <ul id="contactid" style="margin:0;padding:0;">
+      <li><b style="font-family:'montserratbold';color: #262626;font-size: 28px;font-family:Arial;color:white">Contact Us</b></li>
       <li>Name : Dinesh Kumar</li>
       <li>Ph : 8778593843</li>
       <li>Name : S.Saadhana</li>
@@ -1657,6 +1665,7 @@ Select Team Size
     <a href="index">Go Home</a>
   </centre>
     {% endif %}
+</div>
 
 
 <script>

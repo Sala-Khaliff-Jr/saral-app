@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zq+v6n2*z4f$(ix_vgly@2e-u05kqf8m%#f7nsf!=-ec5#286_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['saaralkite.pythonanywhere.com']
 

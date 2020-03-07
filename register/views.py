@@ -89,18 +89,28 @@ def register_view(request):
         if request.POST.get('THE UNDERRATED TROUPER') == 'on':
             events += "The Underrated Trouper, "
             total_cost += 100
-        print(events)
+        # print(events)
+
         if request.POST.get('PUBG') == 'on':
-            events += "Pubg, "
             if request.POST.get('mobsolo') == 'on':
                 total_cost += 50
+                events += "Pubg Solo, "
             if request.POST.get('mobsquad') == 'on':
                 total_cost += 200
+                events += "Pubg Squad, "
+            if ((request.POST.get('mobsolo') != 'on') and (request.POST.get('mobsquad') != 'on')):
+                events += "PUBG, "
+                total_cost += 200
+
         if request.POST.get('Free Fire') == 'on':
-            events += "Free Fire, "
             if request.POST.get('mobsolo') == 'on':
                 total_cost += 50
+                events += "Free Fire Solo, "
             if request.POST.get('mobsquad') == 'on':
+                total_cost += 200
+                events += 'Free Fire Squad, '
+            if ((request.POST.get('mobsolo') != 'on') and (request.POST.get('mobsquad') != 'on')):
+                events += "Free Fire, "
                 total_cost += 200
 
         if request.POST.get('NFS MW') == 'on':

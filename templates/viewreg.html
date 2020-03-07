@@ -1,5 +1,58 @@
 {%load static%}
 
 {% for students in registrations %}
-    <li>{{students.id }} {{students.student_name }} {{ students.email_id}}  {{ students.college_name}} {{students.events}}</li>
+    <li>{{students.id }},{{students.student_name }},{{students.email_id }},
+    {%if students.college_name == '23'%}
+        American College
+
+    {%elif students.college_name == '59'%}
+        Barathiyar University
+
+    {%elif students.college_name == '184'%}
+        Indian Institute of Science Bangalore
+
+    {%elif students.college_name == '251'%}
+        KGISL Institute Of Technology
+
+    {%elif students.college_name == '260'%}
+        KPR Institute of Engineering and Technology
+
+    {%elif students.college_name == '455'%}
+        SNS COLLEGE OF TECHNOLOGY
+
+    {%elif students.college_name == '477'%}
+        Sri Ramakrishna Engineering College
+
+    {%elif students.college_name == '562'%}
+        Vinayaka Mission's Kirupananda Variyar Engineering College
+
+    {%elif students.college_name == '576'%}
+        Kumaraguru Institutions(KCT/B-School/KCLAS)
+
+    {%elif students.college_name == '578'%}
+        Avinashilingam University - Engineering
+
+    {%elif students.college_name == '594'%}
+        Dr.G.R.Damodaran College of Science
+
+    {%elif students.college_name == '601'%}
+        Dr.N.G.P. Arts and Science College
+
+    {%elif students.college_name == '608'%}
+        Hindustan College of Arts & Science
+
+    {%elif students.college_name == '611'%}
+        PSGR Krishnammal College for Women
+
+    {%elif students.college_name == '700'%}
+        KG College of Arts and Science
+
+    {%elif students.college_name == 'others'%}
+        others
+
+    {%else%}
+        {{students.college_name}}
+    {%endif%},
+
+    {{students.events }}</li>
 {% endfor %}
